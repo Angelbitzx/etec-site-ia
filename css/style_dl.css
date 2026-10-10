@@ -1,0 +1,232 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    --fundo: #f8f8f8;
+    --fundo-banner: #5499ba;
+    --fundo-menu: #224466;
+    --fundo-caixas: #eeeeee;
+    --texto-principal: #333333;
+    --texto-segundario: #666666;
+    --borda: #c0deed;
+}
+
+/* Reset básico para evitar rolagens indesejadas */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo);
+    margin: 0;
+    padding: 0;                         
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens descam em telas menores */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cabecalho {
+    background: #59b url("https://web.archive.org/web/20100722014630im_/http://s.twimg.com/a/1279750718/images/fronts/twitter-sun.gif") no-repeat 50% 0;
+    padding: 30px 150px 5px 150px;
+    color: #ffffff;
+}
+
+.topo { 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+#logo {
+    width: 330px;
+}
+
+.menu {
+    background-color: var(--fundo-menu);
+    display: flex;  
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.menu a {
+    color: #6ac;
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #def;
+}
+
+.flutuante {
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    max-width: 260px;
+    padding: 12px;
+    border-radius: 15px;
+    background-color: var(--fundo);
+    color: #456;
+}
+
+.flutuante h2 {
+    font-size: 20px;
+}
+
+.flutuante section {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.flutuante #principal {
+    background-color: #ddeef6;
+}
+
+.flutuante #extra {
+    margin-top: 12px;
+    background-color: #eee;
+}
+
+.caixa {
+    background-color: var(--fundo-caixas);
+    border-radius: 8px;
+    margin: 0;
+    min-height: 300px;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 250px; /* Adapta ao espaço disponível */
+}
+
+.conteudo {
+    color: var(--texto-principal);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: justify;
+    width: 100%;
+    flex: 2 1 300px; /* Expande para ocupar o espaço principal */
+    margin: 0;
+    min-height: auto;
+}
+ 
+.imagem {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-color: var(--fundo-caixas);
+}
+
+.rodape {
+    background: linear-gradient(to bottom, #ecedec,#efeeef);
+    padding: 20px;
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+    min-height: 50px;
+}
+
+.conteudo-caixa {
+    text-align: justify;
+    padding: 10px;
+    color: var(--texto-principal);
+}
+
+.titulo-caixa {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #686667;
+}
+
+.frase-banner {
+    color: #c9e9f7;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.container-pesquisa {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 340px;
+    opacity: 50%;
+    transition: opacity 0.4s;
+}
+
+.container-pesquisa:hover {
+    opacity: 100%;
+}
+
+.barra-pesquisa {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 5px 40px 5px 10px;
+    border-radius: 5px;
+    border: none;
+    height: 32px;
+    width: 100%;
+    background: #fff;
+    color: var(--texto-segundario);
+    box-sizing: border-border-box;
+}
+
+.botao-pesquisa {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    padding: 0 15px;
+    background: linear-gradient(to bottom, #fff, #ccc);
+    border-radius: 0 3px 3px 0;
+    color: #333333;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Adjusts responsivos para telas menores (smartphones) */
+@media (max-width: 768px) {
+    .topo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .container-pesquisa {
+        max-width: 100%;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu a {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .caixa {
+        max-width: 100%;
+    }
+}

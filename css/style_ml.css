@@ -1,0 +1,757 @@
+/* =========================
+   CONFIGURAÇÃO GERAL
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("/Img/fundosegundario.png");
+    background-color: #c9cbcc;
+    color: #1a3a5c;
+    font-family: "Trebuchet MS", Tahoma, Verdana, sans-serif;
+}
+
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+#cabecalho {
+    position: relative;
+    width: 95%;
+    height: 120px;
+    margin: 0 auto 10px;
+    padding: 20px;
+    border: 2px outset #B3E5FC;
+    overflow: hidden;
+    background: linear-gradient(to bottom,
+            #1a3a5c,
+            #4FC3F7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+.machinelearning {
+    margin: 0;
+    font-family: Impact, "Trebuchet MS", sans-serif;
+    font-size: 70px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow:
+        1px 1px 0 #0b2942,
+        2px 2px 0 #4FC3F7;
+}
+
+
+/* =========================
+   CÉREBRO
+   ========================= */
+
+.braingift {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+.braingift img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* =========================
+   ROBÔ
+   ========================= */
+
+.robotgif {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+.robotgif img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* =========================
+   ROBÔ DA CAIXA
+   ========================= */
+
+.robo_caixa {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.robo_caixa img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+.robo_caixa h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
+#menu {
+    width: 95%;
+    height: 60px;
+    margin: 0 auto;
+    border: 2px outset #B3E5FC;
+    overflow: hidden;
+    color: #0A0A0A;
+    background: linear-gradient(180deg,
+            #848788 0%,
+            #B3E5FC 30%,
+            #c7d6dd 50%,
+            #95cae7 70%,
+            #818e94 100%);
+    display:flex;
+}
+
+
+/* =========================
+   BOTÃO DO MENU
+   ========================= */
+.botaomenu {
+    height: 100%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.botaomenu p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0b2942;
+    text-align: center;
+}
+
+
+/* =========================
+   BOTÃO VOLTAR
+   ========================= */
+
+.voltar {
+    width: auto;
+    height: 30px;
+    display: block;
+}
+
+.avancar {
+    width: auto;
+    height: 30px;
+    display: block;
+}
+/* =========================
+   CONTEÚDO
+   ========================= */
+
+#conteudo {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    /* Impede que as caixas estiquem juntas */
+    gap: 5px;
+}
+
+
+/* =========================
+   SEÇÃO PRINCIPAL
+   ========================= */
+
+.secao {
+    flex: 1;
+    min-width: 0;
+    order: 2;
+    padding: 20px;
+    border: 2px outset #B3E5FC;
+    background-color: #E1F5FE;
+    color: #1a3a5c;
+}
+
+.secao h2 {
+    margin-top: 0;
+    color: #0b2942;
+}
+
+.secao p {
+    font-size: 14px;
+    color: #1a3a5c;
+}
+
+
+/* =========================
+   TÍTULO DA SEÇÃO
+   ========================= */
+
+.secaotitulo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.secaotitulo>img {
+    width: 150px;
+    height: auto;
+    display: block;
+    justify-content: center;
+}
+
+
+/* =========================
+   ÁREA DO TÍTULO
+   ========================= */
+
+.tituloarea {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 0;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.titulosecao {
+    margin: 0;
+    padding: 20px;
+    font-family: Impact, "Trebuchet MS", sans-serif;
+    font-size: 5em;
+    font-weight: normal;
+    color: #0b2942;
+    text-shadow: 1px 1px 0 #B3E5FC;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* =========================
+   ESTRELAS
+   ========================= */
+
+.star {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.star img {
+    width: min(600px, 100%);
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+}
+
+
+/* =========================
+   COMPUTADOR
+   ========================= */
+
+.computer {
+    margin: 0;
+    padding: 0;
+}
+
+.computer img {
+    width: 130px;
+    height: 100px;
+    display: block;
+}
+
+@media (min-width: 961px) and (max-width: 1450px) {
+    .secaotitulo {
+        gap: clamp(8px, 1.2vw, 20px);
+    }
+
+    .secaotitulo > img {
+        width: clamp(64px, 8vw, 120px);
+    }
+
+    .computer img {
+        width: clamp(58px, 6.4vw, 96px);
+        height: auto;
+    }
+
+    .titulosecao {
+        padding: 10px;
+        font-size: clamp(2.7rem, calc(10vw - 54px), 5rem);
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================
+   SEPARADORES
+   ========================= */
+
+.separador {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.separador img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================
+   PESQUISAS
+   ========================= */
+
+.pesquisa {
+    margin: 20px 0;
+}
+
+.pesquisa h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 5px 8px;
+    font-family: Impact, "Trebuchet MS", sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    color: #FFFFFF;
+    background: linear-gradient(180deg,
+            #31536a,
+            #78a8c1,
+            #29485c);
+    border: 2px outset #B3E5FC;
+    text-shadow: 1px 1px 0 #172b3a;
+}
+
+.pesquisa h4 {
+    margin-bottom: 5px;
+    color: #0b2942;
+    font-size: 16px;
+}
+
+.pesquisa p {
+    line-height: 1.5;
+}
+
+.pesquisa ul {
+    line-height: 1.7;
+    color: #1a3a5c;
+
+}
+
+.robo{
+    display:flex;
+    
+}
+.robo img{
+    height:200px;
+    width:auto;
+    margin-right:10px;
+    margin-left:auto;
+    margin-top: auto;
+    margin-bottom:auto;
+    border-width: 5px;
+    border-style: double;
+    border-color: #c7e5f2;
+    background: #31536a;
+}
+
+
+
+
+
+
+/* =========================
+   AVISO
+   ========================= */
+
+.aviso {
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
+    font-family: "Lucida Console", monospace;
+    font-weight: bold;
+    color: #FFFF00;
+    background-color: #172b3a;
+    border: 2px inset #B3E5FC;
+}
+
+
+/* =========================
+   CURIOSIDADE
+   ========================= */
+
+.curiosidade {
+    margin-top: 25px;
+    padding: 15px;
+    background: #c7e5f2;
+    border: 3px double #31536a;
+    text-align: center;
+}
+
+.curiosidade h3 {
+    margin-top: 0;
+    font-family: Impact, "Trebuchet MS", sans-serif;
+    color: #0033CC;
+}
+
+
+/* =========================
+   GIF LATERAL
+   ========================= */
+
+.giflateral {
+    width: 130px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+
+/* =========================
+   GLOBO
+   ========================= */
+
+.globo {
+    width: 200px;
+    height: 200px;
+    margin: 40px auto 20px;
+    /* Centraliza o globo e dá espaço acima e abaixo */
+    padding: 0;
+    overflow: hidden;
+}
+
+.globo img {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+
+/* =========================
+   RODAPÉ DA SEÇÃO
+   ========================= */
+
+.rodapesecao {
+    margin-top: 20px;
+    height: 100px;
+    padding: 15px;
+    text-align: center;
+    border: 2px inset #B3E5FC;
+    background: #172b3a;
+    color: #E1F5FE;
+    font-size: 12px;
+}
+
+.rodapesecao p {
+    margin: 5px;
+    color: #4FC3F7;
+}
+
+
+/* =========================
+   CAIXA LATERAL
+   ========================= */
+
+.caixa_lateral {
+    width: clamp(250px, 22vw, 300px);
+    order: 1;
+    min-height: 0;
+    padding: 15px;
+    border: 2px solid #B3E5FC;
+    background: linear-gradient(180deg,
+            #172b3a 0%,
+            #31536a 20%,
+            #78a8c1 45%,
+            #aedbee 50%,
+            #6d9bb2 55%,
+            #29485c 80%,
+            #101c26 100%);
+    color: #f0fee1;
+    box-shadow:
+        inset 2px 2px 0 #E1F5FE,
+        inset -2px -2px 0 #1a3a5c;
+}
+
+.caixa_lateral h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0 #1a3a5c;
+}
+
+.caixa_lateral h3 {
+    color: #f3e9ee;
+    font-size: 16px;
+}
+
+.caixa_lateral p {
+    font-size: 18px;
+    color: #e5ff00;
+    line-height: 1.5;
+}
+
+.caixa_lateral hr {
+    border: 0;
+    border-top: 2px dotted #B3E5FC;
+    margin: 20px 0;
+}
+
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+    color: #0033CC;
+}
+
+a:visited {
+    color: #551A8B;
+}
+
+a:hover {
+    color: #FFFF00;
+}
+
+
+/* =========================
+   RODAPÉ PRINCIPAL
+   ========================= */
+
+#rodape {
+    width: 95%;
+    margin: 0 auto 20px;
+    text-align: center;
+    height: 100px;
+    color: #E1F5FE;
+    background: linear-gradient(180deg,
+            #172b3a 0%,
+            #31536a 20%,
+            #78a8c1 45%,
+            #c7e5f2 50%,
+            #6d9bb2 55%,
+            #29485c 80%,
+            #101c26 100%);
+    border: 2px outset #B3E5FC;
+}
+
+#rodape p {
+    margin: 0;
+    padding-top: 35px;
+    font-size: 12px;
+    color: #E1F5FE;
+}
+
+@media (max-width: 960px) {
+    #conteudo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .caixa_lateral,
+    .secao {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .secao {
+        order: 1;
+    }
+
+    .caixa_lateral {
+        order: 2;
+    }
+
+    .secaotitulo {
+        min-width: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .secaotitulo > img {
+        width: clamp(64px, 14vw, 120px);
+        max-width: 25%;
+    }
+
+    .tituloarea {
+        flex: 1 1 200px;
+        min-width: 0;
+    }
+
+    .titulosecao {
+        padding: 10px;
+        font-size: clamp(2rem, 7vw, 4.5rem);
+        overflow-wrap: anywhere;
+    }
+
+    .star {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .star img {
+        width: min(600px, 100%);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .computer img {
+        width: clamp(64px, 12vw, 110px);
+        height: auto;
+    }
+
+    .globo {
+        width: min(200px, 100%);
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .globo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #rodape {
+        height: auto;
+        min-height: 100px;
+        padding: 12px;
+    }
+
+    #rodape p {
+        padding-top: 8px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 620px) {
+    #cabecalho {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        justify-items: center;
+        gap: 8px;
+        width: 95%;
+        height: auto;
+        min-height: 130px;
+        padding: 12px;
+    }
+
+    .machinelearning {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        font-size: clamp(1.4rem, 7vw, 2.2rem);
+        letter-spacing: 0;
+    }
+
+    .braingift,
+    .robotgif {
+        position: static;
+        grid-row: 2;
+        top: auto;
+        right: auto;
+        left: auto;
+        width: clamp(52px, 16vw, 72px);
+        height: auto;
+        transform: none;
+    }
+
+    .braingift {
+        grid-column: 1;
+    }
+
+    .robotgif {
+        grid-column: 3;
+    }
+
+    .braingift img,
+    .robotgif img {
+        width: 100%;
+        height: auto;
+    }
+
+    #menu {
+        height: auto;
+        min-height: 60px;
+        overflow: visible;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 6px;
+    }
+
+    .botaomenu {
+        min-height: 44px;
+        height: auto;
+        margin: 0 4px;
+    }
+
+    .secao {
+        padding: 14px;
+    }
+
+    .secaotitulo > img {
+        width: clamp(48px, 15vw, 72px);
+        max-width: 24%;
+    }
+
+    .titulosecao {
+        padding: 6px;
+        font-size: clamp(1.65rem, 8vw, 3rem);
+        text-align: center;
+    }
+
+    .computer img {
+        width: clamp(52px, 16vw, 76px);
+    }
+
+    .caixa_lateral img,
+    .separador img,
+    .giflateral {
+        max-width: 100%;
+        height: auto;
+    }
+}
