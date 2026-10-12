@@ -260,41 +260,52 @@ p {
   border-right: 20px solid #FFFFFF;
 }
 
-.TextoCaixa1{
-  border: 1px solid #ccc;     
-  border-radius: 8px;         
-  padding: 16px;                
-  max-width: 400px;             
-  background-color: #f9f9f9;    
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: -200px auto 0 auto;
+/* Caixa única: "O que é o Claude?" + "Chatbots" */
+.LinhaIntro {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 32px;
 }
 
-.TextoCaixa1 h3 {
+.LinhaIntro .TextoBalao {
+  flex: 0 0 300px;
+}
+
+.TextoCaixa {
+  box-sizing: border-box;
+  flex: 1 1 420px;
+  max-width: 900px;
+  margin: 20px 2rem 20px 0;
+  padding: 28px 32px;
+  background: #ffffff;
+  border: 1px solid #e5e2d9;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.TextoCaixa h3 {
   font-family: 'Poppins', sans-serif;
-  margin-left: 0;               
-  color: #333;                  
-  font-size: 1.25rem;           
-  margin-bottom: 8px;           
+  color: #2b2a28;
+  font-size: 1.1rem;
+  margin: 0 0 8px;
 }
 
-.TextoCaixa2{
-  border: 1px solid #ccc;     
-  border-radius: 8px;         
-  padding: 16px;                
-  max-width: 400px;             
-  background-color: #f9f9f9;    
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-left: 1500px;
-  margin-top: -300px;
+.TextoCaixa h3:not(:first-child) {
+  margin-top: 28px;
 }
 
-.TextoCaixa2 h3 {
-  font-family: 'Poppins', sans-serif;
-  margin-left: 0;               
-  color: #333;                  
-  font-size: 1.25rem;           
-  margin-bottom: 8px;           
+.TextoCaixa p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+  .TextoCaixa {
+    margin: 0 1rem 20px;
+    padding: 20px;
+  }
 }
 
 .TextoCaixaGrande {
@@ -407,7 +418,7 @@ p {
 .LogoAnthropic img {
   display: block;
   height: 300px;
-  width: 300;
+  width: auto;
   max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
@@ -425,8 +436,7 @@ p {
 }
 
 .TextoBalao,
-.TextoCaixa1,
-.TextoCaixa2,
+.TextoCaixa,
 .TextoCaixaGrande,
 .LogoAnthropic {
   animation: entrar 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
@@ -436,8 +446,7 @@ p {
 }
 @supports (animation-timeline: view()) {
   .TextoBalao,
-  .TextoCaixa1,
-  .TextoCaixa2,
+  .TextoCaixa,
   .TextoCaixaGrande,
   .LogoAnthropic {
     animation: entrar linear both;
@@ -446,16 +455,14 @@ p {
   }
 }
 .TextoBalao,
-.TextoCaixa1,
-.TextoCaixa2,
+.TextoCaixa,
 .TextoCaixaGrande,
 .LogoAnthropic img {
   transition: translate 0.25s ease, box-shadow 0.25s ease;
 }
 
 .TextoBalao:hover,
-.TextoCaixa1:hover,
-.TextoCaixa2:hover,
+.TextoCaixa:hover,
 .TextoCaixaGrande:hover,
 .LogoAnthropic img:hover {
   translate: 0 -4px;
@@ -464,16 +471,14 @@ p {
 
 @media (prefers-reduced-motion: reduce) {
   .TextoBalao,
-  .TextoCaixa1,
-  .TextoCaixa2,
+  .TextoCaixa,
   .TextoCaixaGrande,
   .LogoAnthropic {
     animation: none;
   }
 
   .TextoBalao,
-  .TextoCaixa1,
-  .TextoCaixa2,
+  .TextoCaixa,
   .TextoCaixaGrande,
   .LogoAnthropic img {
     transition: none;
