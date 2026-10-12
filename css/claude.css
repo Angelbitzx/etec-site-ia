@@ -275,7 +275,6 @@ p {
 .TextoCaixa {
   box-sizing: border-box;
   flex: 1 1 420px;
-  max-width: 900px;
   margin: 20px 2rem 20px 0;
   padding: 28px 32px;
   background: #ffffff;
