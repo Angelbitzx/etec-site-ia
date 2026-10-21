@@ -146,6 +146,7 @@ h1, h2, h3 { font-family: "Barlow Condensed", sans-serif; }
 
 .content-layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; align-items: start; gap: 28px; }
 .main-column, .side-column { display: grid; gap: 30px; min-width: 0; }
+.side-column { padding-top: 45px; }
 .intro-block { padding: 25px 0 0; }
 .section-heading { display: flex; align-items: flex-start; gap: 14px; }
 .section-heading .eyebrow { margin-bottom: 5px; }
@@ -243,6 +244,7 @@ h1, h2, h3 { font-family: "Barlow Condensed", sans-serif; }
     .hero-art img { height: 180px; }
     .content-layout { grid-template-columns: 1fr; }
     .main-column, .side-column { gap: 14px; }
+    .side-column { padding-top: 0; }
     .intro-block { padding: 19px 17px 0; }
     .section-heading h2 { font-size: 30px; }
     .intro-content { margin: 17px 0; font-size: 12px; }
