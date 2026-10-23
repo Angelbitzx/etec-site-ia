@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" role="img" aria-labelledby="title description">
+  <title id="title">Relação entre inteligência artificial, aprendizado de máquina e aprendizado profundo</title>
+  <desc id="description">O aprendizado de máquina está dentro da inteligência artificial, e o aprendizado profundo está dentro do aprendizado de máquina.</desc>
+  <rect width="640" height="280" rx="24" fill="#f3f8fc"/>
+  <rect x="24" y="24" width="592" height="232" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="48" y="62" fill="#173b67" font-family="Arial, sans-serif" font-size="22" font-weight="700">Inteligência artificial</text>
+  <rect x="64" y="86" width="520" height="144" rx="18" fill="#bfdbfe" stroke="#1971c2" stroke-width="3"/>
+  <text x="88" y="121" fill="#173b67" font-family="Arial, sans-serif" font-size="20" font-weight="700">Machine learning</text>
+  <rect x="120" y="143" width="408" height="64" rx="16" fill="#93c5fd" stroke="#1259a8" stroke-width="3"/>
+  <text x="324" y="183" fill="#10375f" font-family="Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle">Deep learning</text>
+</svg>
