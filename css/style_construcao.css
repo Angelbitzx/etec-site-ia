@@ -1,6 +1,6 @@
 @layer reset, base, components, utilities, overrides;
 
-/* Skeleton */
+/* Skeleton / Variáveis */
 :root {
     --azul-escuro: #0B2545;
     --azul: #1F5FA8;
@@ -14,46 +14,25 @@
     --sombra: 0 2px 8px rgba(11, 37, 69, .08);
 }
 
-
-
-
-
-/* Layer dos estilos de limpeza global */
-/*  Padronização das regras automáticas de cada navegador */
+/* Layer de Limpeza Global */
 @layer reset {
-
     * {
-
         box-sizing: border-box;
-
     }
 
     @media (prefers-reduced-motion: reduce) {
-
         html {
-
             scroll-behavior: auto;
-
         }
-
     }
-
 }
 
-/* Final do Layer dos estilos de limpeza global */
-
-
-
-
-
-
-/* Layer do código basex */
-/* Configuração dos estilos padrão das tags html */
+/* Layer Base */
 @layer base {
     html {
         scroll-behavior: smooth;
         scroll-padding-top: 110px;
-        overflow-x: hidden
+        overflow-x: hidden;
     }
 
     body {
@@ -71,57 +50,45 @@
         background-attachment: fixed;
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
         font-family: inherit;
         font-weight: 700;
         line-height: 1.2;
-        margin: 0 0 .5em
+        margin: 0 0 .5em;
     }
 
     h1 {
-        font-size: clamp(2.6rem, 5vw, 3.6rem)
+        font-size: clamp(2.6rem, 5vw, 3.6rem);
     }
 
     h2 {
         font-size: 2.4rem;
-        color: var(--azul-escuro)
+        color: var(--azul-escuro);
     }
 
     h3 {
-        font-size: 1.6rem
+        font-size: 1.6rem;
     }
 
     p {
-        margin: 0 0 1em
+        margin: 0 0 1em;
     }
 
     a {
-        color: var(--azul)
+        color: var(--azul);
     }
-
 }
 
-/* Final do Layer do código basex */
-
-
-
-
-
-/* Layer dos componentes do site */
-/* Configuração dos componentes gerais do site */
+/* Layer de Componentes */
 @layer components {
-    /* Layout Geral */
-
     .container {
         width: min(1140px, 100% - 48px);
         margin-inline: auto;
     }
 
     main section {
-        padding: 80px 0px;
-        border-bottom: 1px solid var(--linha)
+        padding: 80px 0;
+        border-bottom: 1px solid var(--linha);
     }
 
     main h2 {
@@ -141,84 +108,309 @@
         background: var(--laranja);
     }
 
-    /* Fim do Layout Geral */
-
-
-
-    /* Layout do Cabeçalho e Menu */
+    /* ==========================================
+       Cabeçalho e Menu
+       ========================================== */
     .cabecalho {
         position: sticky;
         top: 0;
         z-index: 20;
-        background: var(--azul-escuro);
-        box-shadow: 0 3px 0 var(--laranja), 0 4px 14px rgba(0, 0, 0, .25);
+        background-color: var(--azul-escuro);
+        /* Grade de planta técnica, igual à seção inicial */
+        background-image:
+            linear-gradient(rgba(77, 168, 255, .08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77, 168, 255, .08) 1px, transparent 1px);
+        background-size: 24px 24px;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, .28);
+    }
+
+    /* Faixa de cor na base do cabeçalho */
+    .cabecalho::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--laranja), var(--azul-claro) 50%, var(--laranja));
     }
 
     .cabecalho__principal {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 56px;
-        padding: 22px 0;
+        gap: 24px;
+        padding: 18px 0 22px;
     }
 
+    /* Logotipo */
     .cabecalho__marca {
+        position: relative;
+        z-index: 2;
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        gap: 14px;
         flex: none;
-        font-size: 2.6rem;
-        font-weight: 800;
-        line-height: 1;
-        white-space: nowrap;
         text-decoration: none;
         color: var(--branco);
+        white-space: nowrap;
     }
 
-    .cabecalho__marca small {
-        font-size: 1.3rem;
+    .cabecalho__icone {
+        width: 46px;
+        height: 46px;
+        flex: none;
+        transition: transform .3s ease;
+    }
+
+    .cabecalho__marca:hover .cabecalho__icone {
+        transform: rotate(-8deg) scale(1.06);
+    }
+
+    .cabecalho__texto {
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1;
+    }
+
+    .cabecalho__texto small {
+        margin-top: 4px;
+        font-size: 1.1rem;
         font-weight: 700;
         color: var(--laranja);
-        margin-top: 4px;
     }
 
-    .cabecalho__marca i {
-        font-style: normal
+    .cabecalho__texto i {
+        font-style: normal;
     }
 
+    /* Linha de cota (estilo desenho técnico) ligando logo e menu */
     .cabecalho__divisor {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 3px;
-        height: 56px;
-        background: var(--laranja);
+        flex: 1;
+        min-width: 24px;
+        height: 14px;
+        position: relative;
+        background:
+            linear-gradient(var(--laranja), var(--laranja)) left center / 2px 100% no-repeat,
+            linear-gradient(var(--laranja), var(--laranja)) right center / 2px 100% no-repeat;
     }
 
+    .cabecalho__divisor::before {
+        content: "";
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        top: 50%;
+        height: 2px;
+        transform: translateY(-50%);
+        background: repeating-linear-gradient(90deg, rgba(77, 168, 255, .6) 0 8px, transparent 8px 14px);
+    }
+
+    /* Menu principal */
     .menu {
         display: flex;
         align-items: center;
-        gap: 36px;
-        font-size: 1.25rem;
-        font-weight: 700
+        gap: 6px;
+        font-size: 1.1rem;
+        font-weight: 700;
     }
 
-    .menu a {
-        padding: 6px 0;
+    .menu > a {
+        position: relative;
+        z-index: 2;
+        padding: 8px 14px;
+        color: #DCE8F5;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color .2s ease, color .2s ease;
+    }
+
+    /* Sublinhado que cresce do centro */
+    .menu > a::after {
+        content: "";
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 2px;
+        height: 3px;
+        border-radius: 999px;
+        background: var(--laranja);
+        transform: scaleX(0);
+        transition: transform .25s ease;
+    }
+
+    .menu > a:hover,
+    .menu > a:focus-visible {
+        color: var(--branco);
+        background: rgba(255, 255, 255, .08);
+    }
+
+    .menu > a:hover::after,
+    .menu > a:focus-visible::after {
+        transform: scaleX(1);
+    }
+
+    .menu > a:focus-visible {
+        outline: 3px solid var(--azul-claro);
+        outline-offset: 2px;
+    }
+
+    /* ==========================================
+       Dropdown (somente CSS, usa checkbox + label)
+       ========================================== */
+    .dropdown {
+        position: relative;
+        margin-left: 8px;
+    }
+
+    .dropdown__toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .dropdown__botao {
+        position: relative;
+        z-index: 3;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 18px;
+        border: 2px solid var(--laranja);
+        border-radius: 999px;
+        color: var(--laranja);
+        cursor: pointer;
+        user-select: none;
+        transition: background-color .2s ease, color .2s ease;
+    }
+
+    .dropdown__botao svg {
+        transition: transform .25s ease;
+    }
+
+    .dropdown__botao:hover,
+    .dropdown__toggle:checked + .dropdown__botao {
+        background: var(--laranja);
+        color: var(--azul-escuro);
+    }
+
+    .dropdown__toggle:checked + .dropdown__botao svg {
+        transform: rotate(180deg);
+    }
+
+    .dropdown__toggle:focus-visible + .dropdown__botao {
+        outline: 3px solid var(--azul-claro);
+        outline-offset: 3px;
+    }
+
+    /* Camada invisível que fecha o menu ao clicar fora */
+    .dropdown__fundo {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        cursor: default;
+    }
+
+    .dropdown__toggle:checked ~ .dropdown__fundo {
+        display: block;
+    }
+
+    /* Painel com os links */
+    .dropdown__lista {
+        position: absolute;
+        z-index: 4;
+        top: calc(100% + 22px);
+        right: 0;
+        width: 320px;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        background: var(--azul-escuro);
+        border: 1px solid rgba(77, 168, 255, .35);
+        border-top: 4px solid var(--laranja);
+        border-radius: 0 0 14px 14px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity .2s ease, transform .2s ease, visibility .2s;
+    }
+
+    /* Ponte invisível para o mouse não "perder" o menu ao descer */
+    .dropdown__lista::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -28px;
+        height: 24px;
+    }
+
+    .dropdown__toggle:checked ~ .dropdown__lista {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .dropdown__lista a {
+        display: block;
+        padding: 12px 16px;
+        border-left: 3px solid transparent;
+        border-radius: 8px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        line-height: 1.3;
         color: var(--branco);
         text-decoration: none;
-        border-bottom: 3px solid transparent;
+        transition: background-color .2s ease, border-color .2s ease;
     }
 
-    .menu a:hover {
-        border-bottom-color: var(--laranja)
+    .dropdown__lista a small {
+        display: block;
+        margin-top: 2px;
+        font-size: .9rem;
+        font-weight: 400;
+        color: #9FB6D0;
     }
 
+    .dropdown__lista a:hover,
+    .dropdown__lista a:focus-visible {
+        background: rgba(255, 159, 28, .13);
+        border-left-color: var(--laranja);
+        outline: none;
+    }
+
+    /* No computador, abre também ao passar o mouse */
+    @media (hover: hover) and (min-width: 1061px) {
+        .dropdown:hover .dropdown__lista {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+
+        .dropdown:hover .dropdown__botao {
+            background: var(--laranja);
+            color: var(--azul-escuro);
+        }
+
+        .dropdown:hover .dropdown__botao svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    /* Botão hambúrguer (celular) */
     .menu-btn {
         display: none;
         padding: 10px;
         cursor: pointer;
         border: 2px solid var(--branco);
-        border-radius: 6px;
+        border-radius: 8px;
+        background: transparent;
     }
 
     .menu-btn span {
@@ -226,9 +418,10 @@
         width: 26px;
         height: 3px;
         margin: 5px 0;
-        background: var(--branco)
+        border-radius: 2px;
+        background: var(--branco);
+        transition: transform .25s ease, opacity .2s ease;
     }
-
 
     .menu-toggle {
         position: absolute;
@@ -236,32 +429,135 @@
         pointer-events: none;
     }
 
-    .menu-toggle:focus-visible+.menu-btn {
+    .menu-toggle:focus-visible + .menu-btn {
         outline: 3px solid var(--laranja);
         outline-offset: 2px;
     }
 
-    @media(max-width:1100px) {
-        .cabecalho__marca {
-            font-size: 2.2rem
+    /* Hambúrguer vira "X" quando aberto */
+    .menu-toggle:checked + .menu-btn span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle:checked + .menu-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-btn span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    @media (max-width: 1180px) {
+        .menu > a {
+            padding: 8px 10px;
         }
 
-
-        .cabecalho__principal {
-            gap: 28px
-        }
-
-        .menu {
-            gap: 22px;
-            font-size: 1.1rem;
+        .menu > a::after {
+            left: 10px;
+            right: 10px;
         }
     }
 
-    /* Fim do Layout do Cabeçalho e Menu */
+    /* Menu recolhido (celular e tablet) */
+    @media (max-width: 1060px) {
+        .cabecalho__divisor {
+            display: none;
+        }
 
+        .cabecalho__principal {
+            padding: 14px 0 18px;
+        }
 
+        .cabecalho__texto {
+            font-size: 1.8rem;
+        }
 
-    /* Layout da Seção inicial */
+        .menu-btn {
+            display: block;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+            padding: 8px 24px 18px;
+            background: var(--azul-escuro);
+            border-bottom: 4px solid var(--laranja);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, .3);
+        }
+
+        .menu-toggle:checked ~ .menu {
+            display: flex;
+        }
+
+        .menu > a {
+            padding: 14px 6px;
+            border-radius: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .15);
+        }
+
+        .menu > a::after {
+            display: none;
+        }
+
+        .dropdown {
+            margin: 14px 0 0;
+        }
+
+        .dropdown__botao {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 12px 18px;
+            border-radius: 10px;
+        }
+
+        .dropdown__fundo {
+            display: none !important;
+        }
+
+        .dropdown__lista {
+            position: static;
+            display: none;
+            width: auto;
+            margin-top: 8px;
+            padding: 4px 0 4px 12px;
+            background: transparent;
+            border: 0;
+            border-left: 3px solid var(--laranja);
+            border-radius: 0;
+            box-shadow: none;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+
+        .dropdown__lista::before {
+            display: none;
+        }
+
+        .dropdown__toggle:checked ~ .dropdown__lista {
+            display: block;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cabecalho__texto {
+            font-size: 1.6rem;
+        }
+
+        .cabecalho__icone {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    /* Seção Inicial */
     #inicio {
         position: relative;
         isolation: isolate;
@@ -269,7 +565,6 @@
         color: #E8F1FF;
         border-bottom: 0;
     }
-
 
     #inicio::before {
         content: "";
@@ -282,7 +577,8 @@
         z-index: -1;
         background-color: var(--azul-escuro);
         background-image:
-            linear-gradient(rgba(77, 168, 255, .10) 1px, transparent 1px), linear-gradient(90deg, rgba(77, 168, 255, .10) 1px, transparent 1px);
+            linear-gradient(rgba(77, 168, 255, .10) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(77, 168, 255, .10) 1px, transparent 1px);
         background-size: 40px 40px;
     }
 
@@ -294,12 +590,12 @@
     }
 
     .intro h1 {
-        color: var(--branco)
+        color: var(--branco);
     }
 
     .intro__texto p:last-child {
         font-size: 1.3rem;
-        color: #DCE8F5
+        color: #DCE8F5;
     }
 
     .rotulo {
@@ -325,21 +621,17 @@
         display: block;
         width: 100%;
         height: auto;
-        border-radius: 3px
+        border-radius: 3px;
     }
 
     .intro__figura figcaption {
         margin-top: 12px;
         text-align: center;
         font-size: 1rem;
-        color: var(--texto-suave)
+        color: var(--texto-suave);
     }
 
-    /* Fim do Layout da Seção inicial */
-
-
-
-    /* Layout do Passex a Passex */
+    /* Passos */
     .passos {
         margin-top: 28px;
         gap: 20px;
@@ -377,11 +669,10 @@
         padding-left: 14px;
         font-size: 1.7rem;
         border-left: 4px solid var(--laranja);
-        color: var(--azul-escuro)
+        color: var(--azul-escuro);
     }
 
-    .passo p,
-    .passo li {
+    .passo p, .passo li {
         text-align: justify;
         text-justify: inter-word;
     }
@@ -404,33 +695,21 @@
         object-fit: contain;
     }
 
-    .passo ul,
-    .passo ol {
+    .passo ul, .passo ol {
         margin: 0 0 1em;
-        padding-left: 24px
+        padding-left: 24px;
     }
 
     .passo li {
-        margin-bottom: 8px
+        margin-bottom: 8px;
     }
 
     .passo li::marker {
         color: var(--azul);
-        font-weight: 700
+        font-weight: 700;
     }
 
-    .passo p:hover,
-    .passo li:hover {
-        color: var(--azul);
-        transform: translateX(4px);
-        text-shadow: 0 2px 12px rgba(31, 95, 168, .12);
-    }
-
-    /* Fim do Layout do Passex a Passex */
-
-
-
-    /* Layout das Ferramentex */
+    /* Ferramentas */
     #ferramentas .lead {
         max-width: none;
         margin-bottom: 0;
@@ -455,7 +734,6 @@
         gap: 24px;
         padding: 26px 32px;
         background: var(--branco);
-        border-radius: 6px;
         border: 1px solid var(--linha);
         border-left: 4px solid var(--azul-claro);
         border-radius: 12px;
@@ -471,7 +749,7 @@
 
     .ferramentas h3 {
         font-size: 1.4rem;
-        color: var(--azul)
+        color: var(--azul);
     }
 
     .ferramentas p {
@@ -481,11 +759,7 @@
         text-justify: inter-word;
     }
 
-    /* Fim do Layout das Ferramentex */
-
-
-
-    /* Layout das Conclusões e Refs */
+    /* Conclusão e Referências */
     #conclusao p {
         max-width: none;
         text-align: justify;
@@ -500,19 +774,15 @@
 
     .referencias h3 {
         font-size: 1.2rem;
-        color: var(--texto-suave)
+        color: var(--texto-suave);
     }
 
     .referencias p {
         font-size: 1rem;
-        color: var(--texto-suave)
+        color: var(--texto-suave);
     }
 
-    /* Fim do Layout das Conclusões e Refs */
-
-
-
-    /* Layout do Rodapé */
+    /* Rodapé */
     .rodape {
         padding: 36px 24px;
         background: var(--azul-escuro);
@@ -523,57 +793,13 @@
     }
 
     .rodape p {
-        margin: 0
+        margin: 0;
     }
 
-    /* Fim do Layout do Rodapé */
-
-
-
-    /*Layout dos biriri e responsividade*/
-    @media(max-width:820px) {
+    /* Responsividade do Layout */
+    @media(max-width: 820px) {
         body {
-            font-size: 1.05rem
-        }
-
-        .cabecalho__divisor {
-            display: none
-        }
-
-        .cabecalho__principal {
-            padding: 16px 0;
-            gap: 12px;
-        }
-
-        .cabecalho__marca {
-            font-size: 2rem;
-        }
-
-        .menu-btn {
-            display: block;
-        }
-
-        .menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0;
-            padding: 8px 24px 18px;
-            background: var(--azul-escuro);
-            border-bottom: 3px solid var(--laranja);
-        }
-
-        .menu a {
-            padding: 14px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, .15)
-        }
-
-        .menu-toggle:checked~.menu {
-            display: flex;
+            font-size: 1.05rem;
         }
 
         #inicio {
@@ -586,16 +812,15 @@
         }
 
         main section {
-            padding: 60px 0
+            padding: 60px 0;
         }
 
         h2 {
-
-            font-size: 2rem
+            font-size: 2rem;
         }
 
         .passo {
-            padding: 22px 20px
+            padding: 22px 20px;
         }
 
         .passo__imagem {
@@ -615,13 +840,7 @@
         }
     }
 
-    @media(max-width:480px) {
-        .cabecalho__marca {
-            font-size: 1.8rem;
-        }
-    }
-
-    @media(max-width:560px) {
+    @media(max-width: 560px) {
         .passo__imagem {
             float: none;
             width: min(100%, 480px);
@@ -632,25 +851,12 @@
             margin-left: 0;
         }
     }
-
-    /*Fim do Layout dos biriri e responsividade*/
-
-
-
 }
 
-/*Fim do Layer dos componentes do site */
-
-
-
-
-
-/*Layer das utilidades*/
+/* Layer de Utilidades */
 @layer utilities {
-
-    /*Layout dos Efeitex de Cantex e Tamanhex de Titulex */
     .cantos {
-        position: relative
+        position: relative;
     }
 
     .cantos::before,
@@ -668,32 +874,19 @@
         top: -6px;
         left: -6px;
         border-top-width: 3px;
-        border-left-width: 3px
+        border-left-width: 3px;
     }
 
     .cantos::after {
         bottom: -6px;
         right: -6px;
         border-bottom-width: 3px;
-        border-right-width: 3px
+        border-right-width: 3px;
     }
-
-    /*Fim do Layout dos Efeitex de Cantex e Tamanhex de Titulex */
-
-
-
 }
 
-/*Fim do Layer das utilidades*/
-
-
-
-
-
-/* Layer dos overrides */
+/* Layer de Overrides */
 @layer overrides {
-
-    /* Layout dos adentos e pontuações finais */
     h2 {
         position: relative;
         width: 100%;
@@ -723,73 +916,6 @@
         max-width: none;
     }
 
-    .passo h3,
-    .passo p,
-    .passo li,
-    #ferramentas .lead,
-    .ferramentas h3,
-    .ferramentas p,
-    #conclusao p {
-        transition: color .22s ease, transform .22s ease, text-shadow .22s ease;
-    }
-
-    .passo h3:hover,
-    .ferramentas h3:hover,
-    #conclusao .referencias h3:hover {
-        position: relative;
-        z-index: 1;
-        color: var(--azul);
-        transform: translateY(-4px) scale(1.025);
-        text-shadow: 0 5px 18px rgba(31, 95, 168, .24);
-    }
-
-    .intro h1,
-    main h2,
-    .passo h3,
-    .ferramentas h3,
-    #conclusao .referencias h3 {
-        position: relative;
-        width: fit-content;
-        max-width: 100%;
-        transition: color .25s ease, transform .35s cubic-bezier(.2, .8, .2, 1), text-shadow .3s ease;
-        transform-origin: center;
-    }
-
-    main h2 {
-        margin-inline: auto;
-    }
-
-    .intro h1::after,
-    main h2::before,
-    .passo h3::after,
-    .ferramentas h3::after,
-    #conclusao .referencias h3::after {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        pointer-events: none;
-        width: 34px;
-        height: 34px;
-        opacity: 0;
-        background: url("../Img/construção/hover-sparkles.svg") center / contain no-repeat;
-        transition: opacity .2s ease, transform .35s cubic-bezier(.2, .8, .2, 1);
-    }
-
-    .intro h1::after,
-    .passo h3::after,
-    .ferramentas h3::after,
-    #conclusao .referencias h3::after {
-        top: -18px;
-        right: -40px;
-        transform: rotate(-28deg) scale(.35);
-    }
-
-    main h2::before {
-        top: -22px;
-        right: -40px;
-        transform: rotate(-28deg) scale(.35);
-    }
-
     .intro h1:hover,
     main h2:hover,
     .passo h3:hover,
@@ -799,54 +925,4 @@
         transform: translateY(-5px) scale(1.035);
         text-shadow: 0 8px 24px rgba(255, 159, 28, .28);
     }
-
-    .intro h1:hover::after,
-    main h2:hover::before,
-    .passo h3:hover::after,
-    .ferramentas h3:hover::after,
-    #conclusao .referencias h3:hover::after {
-        opacity: 1;
-        transform: rotate(12deg) scale(1);
-    }
-
-    @media(prefers-reduced-motion:reduce) {
-
-        .intro h1,
-        main h2,
-        .passo h3,
-        .ferramentas h3,
-        #conclusao .referencias h3,
-        .intro h1::after,
-        main h2::before,
-        .passo h3::after,
-        .ferramentas h3::after,
-        #conclusao .referencias h3::after {
-            transition: none;
-        }
-
-        .intro h1:hover,
-        main h2:hover,
-        .passo h3:hover,
-        .ferramentas h3:hover,
-        #conclusao .referencias h3:hover {
-            transform: none;
-        }
-
-        .passo h3,
-        .passo p,
-        .passo li,
-        #ferramentas .lead,
-        .ferramentas h3,
-        .ferramentas p,
-        #conclusao p {
-            transition: none;
-        }
-    }
-
-    /* Fim dos adentos e pontuações finais */
-
-
-
 }
-
-/* Fim do layer dos overrides */

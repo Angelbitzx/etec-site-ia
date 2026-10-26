@@ -188,10 +188,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.55rem;
 }
-#separacao_link{
-    display:flex;
-    gap: 0.55rem;
 
+#separacao_link {
+    display: flex;
+    gap: 0.55rem;
 }
 
 .navegacao__link {
@@ -263,7 +263,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
     .navegacao__gatilho,
     .navegacao__icone,
     .navegacao__icone::before,
@@ -295,7 +294,6 @@ main {
     border-bottom: 2px solid #8f8f8f2a;
 }
 
-
 /* --- */
 
 #cabecalho-main {
@@ -321,27 +319,36 @@ main {
     font-weight: 500;
 }
 
-/* Botão Do Main */
+/* Botão Do Main (Padronizado igual aos links do menu) */
 
 #botao_main {
-    background-color: var(--azul);
-    padding: 0.7rem clamp(0.85rem, 2vw, 1.25rem);
-    justify-self: start;
-    white-space: nowrap;
-    flex: 0 0 auto;
-
-    border-radius: 100px;
-    border: 4px solid var(--azul-escuro);
-
-    box-shadow: inset 0 0 6px #4284ff88;
-
-    color: rgb(228, 228, 228);
+    display: inline-flex;
+    min-height: 3.15rem;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #f1c77e66;
+    border-radius: 11px;
+    background: linear-gradient(145deg, #075993, var(--azul) 68%, #003c70);
+    box-shadow: 0 4px 10px #001e3766, inset 0 1px 0 #ffffff30;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.2;
     text-align: center;
     text-decoration: none;
-    letter-spacing: 0.5px;
-    font-size: clamp(0.55rem, 1vw, 1rem);
-    font-weight: 600;
-    text-shadow: 1.3px 1.3px 0.6px #00000085;
+    letter-spacing: 0.035em;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+#botao_main:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, #0869a8, #004a86 68%, #003a66);
+    box-shadow: 0 8px 16px #001e3780, 0 0 0 1px #f1c77e55;
 }
 
 /* Texto da Main */
@@ -405,7 +412,6 @@ main .secao_secundaria {
     font-size: clamp(0.5rem, 1rem, 2rem);
     line-height: clamp(1.2rem, 3.5vw, 1.6rem);
 }
-
 
 .secao_secundaria ul li {
     margin-left: -0.5rem;
@@ -490,8 +496,7 @@ main .secao_secundaria {
     }
 
     #botao_main {
-        justify-self: auto;
-        font-size: 0.85rem;
+        font-size: 0.84rem;
     }
 
     #secao_principal,

@@ -1,284 +1,256 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Construção das IAs</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Construção das IAs</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/style_construcao.css">
-    </head>
+    <link rel="stylesheet" href="css/style_construcao.css">
+</head>
 
-    <body>
+<body>
 
-        <!-- Layout do Cabeçalho e Menu -->
-        <header class="cabecalho">
-            <div class="container cabecalho__principal">
+    <!-- Layout do Cabeçalho e Menu -->
+    <header class="cabecalho">
+        <div class="container cabecalho__principal">
 
-                <!-- Logotipo do site -->
-                <a href="#inicio" class="cabecalho__marca">
+            <!-- Logotipo do site -->
+            <a href="#inicio" class="cabecalho__marca">
+                <svg class="cabecalho__icone" viewBox="0 0 48 48" aria-hidden="true">
+                    <rect x="2" y="2" width="44" height="44" rx="10" fill="none" stroke="#4DA8FF" stroke-width="2"/>
+                    <path d="M14 16H34M14 16L24 34M34 16L24 34" fill="none" stroke="#4DA8FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="14" cy="16" r="4.5" fill="#4DA8FF"/>
+                    <circle cx="34" cy="16" r="4.5" fill="#4DA8FF"/>
+                    <circle cx="24" cy="34" r="5" fill="#FF9F1C"/>
+                </svg>
+                <span class="cabecalho__texto">
                     Construção<small><i>IAs</i></small>
-                </a>
+                </span>
+            </a>
 
-                <!-- Divisor Decorativo Central -->
-                <span class="cabecalho__divisor" aria-hidden="true"></span>
+            <!-- Linha decorativa estilo planta técnica -->
+            <span class="cabecalho__divisor" aria-hidden="true"></span>
 
+            <!-- Botão do Menu Mobile (Hambúrguer) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir ou fechar o menu">
+                <span></span><span></span><span></span>
+            </label>
 
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle" class="menu-btn" aria-label="Abrir ou fechar o menu">
-                    <span></span><span></span><span></span>
-                </label>
+            <!-- Links de Navegação -->
+            <nav class="menu" aria-label="Navegação principal">
+                <a href="#inicio">Início</a>
+                <a href="#passos">Passo a passo</a>
+                <a href="#ferramentas">Ferramentas</a>
+                <a href="#conclusao">Conclusão</a>
 
-                <!-- Links de Navegação Principal (Cabeçalho) -->
-                <nav class="menu" aria-label="Navegação principal">
-                    <a href="#inicio">Início</a>
-                    <a href="#passos">Passos</a>
-                    <a href="#ferramentas">Ferramentas</a>
-                    <a href="#conclusao">Conclusão</a>
-                </nav>
+                <!-- Menu suspenso (dropdown) feito só com CSS -->
+                <div class="dropdown">
+                    <input type="checkbox" id="dropdown-toggle" class="dropdown__toggle">
+                    <label for="dropdown-toggle" class="dropdown__botao">
+                        Mais páginas
+                        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </label>
 
+                    <!-- Área invisível: clicar fora do menu fecha o dropdown -->
+                    <label for="dropdown-toggle" class="dropdown__fundo" aria-hidden="true"></label>
+
+                    <ul class="dropdown__lista">
+                        <li>
+                            <a href="tipos-de-ia.html">Tipos de IA
+                                <small>Como as IAs são classificadas</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="machine-learning.html">Machine Learning
+                                <small>Como as máquinas aprendem</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="etica-e-ia.html">Ética e IA
+                                <small>Cuidados no uso da tecnologia</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+    <!-- Fim do Layout do Cabeçalho e Menu -->
+
+    <main class="container">
+
+        <!-- Layout da Seção Inicial -->
+        <section id="inicio">
+            <div class="intro">
+                <div class="intro__texto">
+                    <p class="rotulo">ETEC de Santa Isabel · Informática para Internet</p>
+                    <h1>Construção das IAs</h1>
+                    <p>As IA's são ferramentas que podem ser muito úteis para a solução de problemas sem a necessidade de ter um pensamento humano, e sim uma máquina pensa para você, trazendo soluções.</p>
+                </div>
+
+                <figure class="intro__figura cantos">
+                    <img src="Img/construção/planejamento.png" alt="Diagrama em planta azul: dados de entrada seguem para o modelo de IA, que gera uma resposta e passa pelas etapas de limpeza, ajuste e avaliação">
+                    <figcaption>Planejamento de uma IA</figcaption>
+                </figure>
             </div>
-        </header>
-        <!-- Fim do Layout do Cabeçalho e Menu -->
+        </section>
 
+        <!-- Layout do Passo a Passo -->
+        <section id="passos">
+            <h2>Passo a passo</h2>
 
-        <main class="container">
-
-            <!-- Layout da Seção Inicial -->
-            <section id="inicio">
-                <div class="intro">
-
-                    <!-- Bloco de Texto Introdutório -->
-                    <div class="intro__texto">
-                        <p class="rotulo">ETEC de Santa Isabel · Informática para Internet</p>
-                        <h1>Construção das IAs</h1>
-                        <p>As IAs são ferramentas que podem ser muito úteis para a solução de problemas sem a
-                            necessidade de ter um pensamento humano, e sim uma máquina pensa para você, trazendo
-                            soluções.</p>
-                    </div>
-
-
-                    <figure class="intro__figura cantos">
-                        <img src="Img/construção/planejamento.png"
-                            alt="Diagrama em planta azul: dados de entrada seguem para o modelo de IA, que gera uma resposta e passa pelas etapas de limpeza, ajuste e avaliação">
-                        <figcaption>Planejamento de uma IA</figcaption>
+            <div class="passos">
+                <article class="passo">
+                    <h3>1º Passo: Definição do problema</h3>
+                    <figure class="passo__imagem">
+                        <img src="Img/construção/etapa-problema.svg" alt="Cartão com um ponto de interrogação, representando a identificação do problema">
                     </figure>
-
-                </div>
-            </section>
-            <!-- Fim do Layout da Seção Inicial -->
-
-            <!-- Layout do Passo a Passo -->
-            <section id="passos">
-                <h2>Passo a passo</h2>
-
-                <div class="passos">
-
-                    <article class="passo">
-                        <h3>Definição do problema</h3>
-                        <figure class="passo__imagem">
-                            <img src="Img/construção/etapa-problema.svg"
-                                alt="Cartão com um ponto de interrogação, representando a identificação do problema">
-                        </figure>
-                        <p>Para a criação da IA, é necessário saber algumas coisas, como:</p>
-                        <ol>
-                            <li>Qual o problema que necessita de resolução?</li>
-                            <li>Quais as principais características do problema?</li>
-                            <li>Quais as limitações e restrições que a IA tem?</li>
-                            <li>Quais os dados que a IA tem acesso?</li>
-                        </ol>
-                        <p>Se, por exemplo, se quiser criar um chat de IA para se trazer respostas a perguntas variadas
-                            dos usuários, consegue se dizer que:</p>
+                    <p>Para a criação da IA, é necessário saber algumas coisas, como:</p>
+                    <ol>
+                        <li>Qual o problema que necessita de resolução?</li>
+                        <li>Quais as principais características do problema?</li>
+                        <li>Quais as limitações e restrições que a IA tem?</li>
+                        <li>Quais os dados que a IA tem acesso?</li>
+                    </ol>
+                    <div class="exemplo-pratico">
+                        <p><strong>Exemplo prático (Criação de um chat de IA):</strong></p>
                         <ul>
-                            <li>O problema é a necessidade de respostas para perguntas sortidas;</li>
-                            <li>As características do problema são: A necessidade de entendimento de uma linguagem que
-                                pode ser errada em relação a norma padrão, no geral todo tipo de linguagem, e respostas
-                                precisas e completas;</li>
-                            <li>As principais limitações é que pode ter uma demora na resposta e pode acontecer
-                                respostas erradas por desentendimento do que foi dito;</li>
-                            <li>Os dados necessários são: Uma grande quantidade de dados sobre todos os assuntos
-                                possíveis e tipos de linguagem.</li>
+                            <li><strong>Problema:</strong> A necessidade de respostas para perguntas sortidas.</li>
+                            <li><strong>Características:</strong> Entendimento de uma linguagem variada (mesmo fora da norma-padrão) e busca por respostas precisas e completas.</li>
+                            <li><strong>Limitações:</strong> Possibilidade de demora na resposta e ocorrência de respostas erradas por desentendimento do que foi dito.</li>
+                            <li><strong>Dados necessários:</strong> Uma grande quantidade de dados sobre todos os assuntos possíveis e tipos de linguagem.</li>
                         </ul>
-                    </article>
+                    </div>
+                </article>
 
-                    <article class="passo">
-                        <h3>Coleta de dados</h3>
-                        <figure class="passo__imagem">
-                            <img src="Img/construção/etapa-dados-nova.svg"
-                                alt="Documentos organizados fluindo para um banco de dados">
-                        </figure>
-                        <p>Após fazer as perguntas, é necessário coletar dados relevantes para o funcionamento da IA
-                            poder resolver a questão apresentada;</p>
-                        <p>Esses dados coletados precisam ser relevantes e suficientes para o aprendizado da IA. É
-                            importante também que esses arquivos sejam relevantes e de procedência boa, para não haver
-                            informações falsas.</p>
-                        <p>Por exemplo, caso for criar uma IA como dita anteriormente, é necessário colocar chats de
-                            conversa com diversos tipos de linguagem para que a IA saiba como conversar com o usuário.
-                        </p>
-                        <p>Fazendo isso, a IA aprende padrões e consegue sempre fazer de maneira correta o que for
-                            pedido.</p>
-                    </article>
+                <article class="passo">
+                    <h3>2º Passo: Coleta de dados</h3>
+                    <figure class="passo__imagem">
+                        <img src="Img/construção/etapa-dados-nova.svg" alt="Documentos organizados fluindo para um banco de dados">
+                    </figure>
+                    <p>Após fazer as perguntas, é necessário coletar dados relevantes e suficientes para o funcionamento da IA poder resolver a questão apresentada. É fundamental que esses arquivos sejam de boa procedência para evitar informações falsas. Com isso, a IA aprende padrões e consegue sempre agir corretamente.</p>
+                </article>
 
-                    <article class="passo">
-                        <h3>Limpeza e pré-processamento de dados</h3>
-                        <figure class="passo__imagem">
-                            <img src="Img/construção/etapa-limpeza-v2.svg"
-                                alt="Dados sendo limpos e verificados antes do processamento">
-                        </figure>
-                        <p>Agora, já com os dados coletados, é necessário fazer uma análise dos dados, e juntamente com
-                            isso uma limpeza de dados desnecessários, podendo ser necessário também realizar a
-                            normalização de dados e codificação de recursos categóricos.</p>
-                        <p>O objetivo de realizar esta preparação é para que a IA possa aprender de forma adequada.</p>
-                        <p>Ao realizar a limpeza e pré-processamento, é possível garantir que a IA esteja aprendendo com
-                            informações precisas e relevantes, aumentando a probabilidade que ela consiga resolver o
-                            problema.</p>
-                    </article>
+                <article class="passo">
+                    <h3>3º Passo: Limpeza e pré-processamento de dados</h3>
+                    <figure class="passo__imagem">
+                        <img src="Img/construção/etapa-limpeza-v2.svg" alt="Dados sendo limpos e verificados antes do processamento">
+                    </figure>
+                    <p>Com os dados coletados, é feito uma análise, remoção de dados desnecessários, normalização e codificação de recursos categóricos. O objetivo é garantir que a IA aprenda de forma adequada com informações precisas e relevantes.</p>
+                </article>
 
-                    <article class="passo">
-                        <h3>Treinamento do modelo</h3>
-                        <figure class="passo__imagem">
-                            <img src="Img/construção/etapa-treinamento.svg"
-                                alt="Rede de nós conectados, representando um modelo de inteligência artificial em treinamento">
-                        </figure>
-                        <p>Agora, com dados de boa qualidade e limpos, deve-se treinar a IA. Para isso, é necessário
-                            utilizar um algoritmo de aprendizado de máquina.</p>
-                        <p>Existem diversas técnicas, como regressão linear, que podem ser escolhidas com base no tipo
-                            de problema que se deseja resolver.</p>
-                        <p>Durante o treinamento, o modelo é alimentado com dados de entrada e suas respectivas saídas.
-                            Com base nessas informações, a IA ajusta seus parâmetros para fazer previsões cada vez mais
-                            assertivas.</p>
-                        <p>A escolha do algoritmo de aprendizado e configurações de parâmetro são importantes para
-                            garantir que a IA seja treinada de forma adequada.</p>
-                    </article>
+                <article class="passo">
+                    <h3>4º Passo: Treinamento do modelo</h3>
+                    <figure class="passo__imagem">
+                        <img src="Img/construção/etapa-treinamento.svg" alt="Rede de nós conectados, representando um modelo de IA em treinamento">
+                    </figure>
+                    <p>Com dados limpos, treina-se a IA utilizando algoritmos de aprendizado de máquina (como regressão linear) escolhidos conforme o tipo de problema. Durante essa fase, o modelo ajusta parâmetros com base nos dados de entrada e saídas para gerar previsões assertivas.</p>
+                </article>
 
-                    <article class="passo">
-                        <h3>Avaliação do modelo</h3>
-                        <figure class="passo__imagem">
-                            <img src="Img/construção/etapa-avaliacao.svg"
-                                alt="Gráfico com barras e linha de resultados, representando a avaliação do modelo">
-                        </figure>
-                        <p>Após o treinamento da IA, a avaliação se torna crucial para observar se os resultados estão
-                            corretos, bem como a cibersegurança do modelo. Além disso, os testes realizados devem
-                            avaliar a precisão e o desempenho em cenários diversos, simulando situações reais.</p>
-                        <p>É importante lembrar que é essencial o teste em diferentes conjuntos de dados, evitando o
-                            overfitting e garantindo sua capacidade de lidar com situações imprevistas.</p>
-                        <p>A avaliação cuidadosa e abrangente é uma etapa crítica no desenvolvimento de modelos de IA,
-                            então, jamais pule este passo.</p>
-                    </article>
+                <article class="passo">
+                    <h3>5º Passo: Avaliação do modelo</h3>
+                    <figure class="passo__imagem">
+                        <img src="Img/construção/etapa-avaliacao.svg" alt="Gráfico com barras e linha de resultados">
+                    </figure>
+                    <p>A avaliação observa se os resultados estão corretos, avaliando também a cibersegurança do modelo. Os testes medem a precisão e o desempenho em cenários diversos, prevenindo o <em>overfitting</em> e garantindo a capacidade de lidar com situações imprevistas.</p>
+                </article>
 
-                    <article class="passo">
-                        <h3>Ajuste do modelo</h3>
-                        <figure class="passo__imagem">
-                            <img src="Img/construção/etapa-ajuste.svg"
-                                alt="Controles deslizantes para ajustar parâmetros do modelo de IA">
-                        </figure>
-                        <p>Se a IA não estiver se saindo bem na avaliação, é preciso realizar algumas mudanças para
-                            melhorar sua precisão e desempenho. Isso pode envolver ajustar os parâmetros para evitar
-                            problemas como overfitting e underfitting (sobreajuste e sub-ajuste).</p>
-                        <p>Se os ajustes não forem suficientes, pode ser necessário tentar uma técnica de aprendizado de
-                            máquina diferente. O importante é continuar avaliando regularmente o desempenho da IA e
-                            fazer ajustes necessários para garantir que ela seja capaz de gerar respostas corretas.</p>
-                    </article>
+                <article class="passo">
+                    <h3>6º Passo: Ajuste do modelo</h3>
+                    <figure class="passo__imagem">
+                        <img src="Img/construção/etapa-ajuste.svg" alt="Controles deslizantes para ajustar parâmetros">
+                    </figure>
+                    <p>Se a IA não se sair bem, realizam-se mudanças para otimizar sua precisão, ajustando parâmetros para evitar problemas como <em>overfitting</em> (sobreajuste) e <em>underfitting</em> (sub-ajuste). Caso necessário, tenta-se uma técnica de aprendizado diferente.</p>
+                </article>
 
-                    <article class="passo">
-                        <h3>Implantação do modelo</h3>
-                        <figure class="passo__imagem">
-                            <img src="Img/construção/etapa-implantacao.svg"
-                                alt="Servidor conectado a uma tela com cadeado, representando uma IA implantada com segurança">
-                        </figure>
-                        <p>Após todas as etapas anteriores, é possível implantar a IA em um ambiente de produção. Essa
-                            implantação envolve integrar a IA com outros sistemas, configurar servidores e garantir a
-                            segurança.</p>
-                        <p>É essencial monitorar o desempenho do modelo e fazer ajustes quando necessário, como
-                            atualizar os dados de treinamento ou reconfigurar parâmetros. A implantação é a etapa final
-                            do processo, no qual o objetivo é garantir respostas precisas e confiáveis para resolver
-                            efetivamente o problema.</p>
-                    </article>
+                <article class="passo">
+                    <h3>7º Passo: Implantação do modelo</h3>
+                    <figure class="passo__imagem">
+                        <img src="Img/construção/etapa-implantacao.svg" alt="Servidor conectado a uma tela com cadeado">
+                    </figure>
+                    <p>A implantação integra a IA a sistemas de produção, configura servidores e assegura a segurança. O monitoramento contínuo é essencial para atualizar dados de treinamento e reconfigurar parâmetros, garantindo respostas confiáveis.</p>
+                </article>
+            </div>
+        </section>
 
-                </div>
-            </section>
-            <!-- Fim do Layout Passo a Passo -->
+        <!-- Ferramentas -->
+        <section id="ferramentas">
+            <h2>Ferramentas para criar a IA sem programação (Low-Code)</h2>
+            <p class="lead">Plataformas que facilitam a criação da IA sem precisar de um profissional especializado em programação avançada.</p>
 
+            <ol class="ferramentas">
+                <li class="cantos">
+                    <span class="ferramentas__num">01</span>
+                    <div>
+                        <h3>IBM Watson Studio</h3>
+                        <p>Oferece interface visual, treinamento e modelos de Machine Learning.</p>
+                    </div>
+                </li>
+                <li class="cantos">
+                    <span class="ferramentas__num">02</span>
+                    <div>
+                        <h3>Google Cloud AutoML</h3>
+                        <p>Oferece recursos de reconhecimento de imagem, processamento de linguagem natural (PLN) e previsão.</p>
+                    </div>
+                </li>
+                <li class="cantos">
+                    <span class="ferramentas__num">03</span>
+                    <div>
+                        <h3>Hugging Face</h3>
+                        <p>Disponibiliza diversos modelos pré-treinados prontos para uso.</p>
+                    </div>
+                </li>
+                <li class="cantos">
+                    <span class="ferramentas__num">04</span>
+                    <div>
+                        <h3>Teachable Machine</h3>
+                        <p>Ferramenta visual do Google que permite realizar o treinamento da IA sem escrever código.</p>
+                    </div>
+                </li>
+                <li class="cantos">
+                    <span class="ferramentas__num">05</span>
+                    <div>
+                        <h3>PyCaret</h3>
+                        <p>Biblioteca low-code em Python que simplifica a seleção de recursos, treinamento, avaliação e implantação em produção.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
 
-            <section id="ferramentas">
-                <h2>Ferramentas para criar a IA sem programação (Low-Code)</h2>
-                <p class="lead">Vendo os passos acima, podemos ver como é algo complicado programar uma IA, porém será
-                    que existe uma maneira mais simples? Essas plataformas facilitam a criação da IA, sem precisar de um
-                    profissional especializado.</p>
+        <!-- Conclusão -->
+        <section id="conclusao">
+            <h2>Conclusão</h2>
+            <p>Criar uma IA do zero exige seguir processos rigorosos de forma estrita, o que torna o processo desafiador, mas traz grandes vantagens competitivas no mercado de trabalho atual.</p>
+            
+            <h3>Benefícios da Inteligência Artificial</h3>
+            <p>Dentre os principais benefícios, destacam-se:</p>
+            <ul>
+                <li>Melhoria da eficiência operacional e automação de tarefas rotineiras e repetitivas.</li>
+                <li>Análise de grandes volumes de dados para identificar tendências e padrões profundos.</li>
+                <li>Otimização de processos corporativos, redução de erros e aumento expressivo da produtividade.</li>
+            </ul>
 
-                <ol class="ferramentas">
-                    <li class="cantos">
-                        <span class="ferramentas__num">01</span>
-                        <div>
-                            <h3>IBM Watson Studio</h3>
-                            <p>Oferece interface visual, treinamento e modelos de Machine Learning.</p>
-                        </div>
-                    </li>
-                    <li class="cantos">
-                        <span class="ferramentas__num">02</span>
-                        <div>
-                            <h3>Google Cloud AutoML</h3>
-                            <p>Oferece recursos como reconhecimento de imagem, processamento de linguagem natural e
-                                previsão.</p>
-                        </div>
-                    </li>
-                    <li class="cantos">
-                        <span class="ferramentas__num">03</span>
-                        <div>
-                            <h3>Hugging Face</h3>
-                            <p>Oferece modelos pré-treinados.</p>
-                        </div>
-                    </li>
-                    <li class="cantos">
-                        <span class="ferramentas__num">04</span>
-                        <div>
-                            <h3>Teachable Machine</h3>
-                            <p>Ferramenta do Google que permite realizar o treinamento da IA sem escrever código.</p>
-                        </div>
-                    </li>
-                    <li class="cantos">
-                        <span class="ferramentas__num">05</span>
-                        <div>
-                            <h3>PyCaret</h3>
-                            <p>Oferece fácil interface para uso, seleção de recursos, treinamento e avaliação de
-                                modelos, bem como a implantação em produção.</p>
-                        </div>
-                    </li>
-                </ol>
-            </section>
+            <div class="referencias">
+                <h3>Referências</h3>
+                <p>Alura. Como criar inteligência artificial (IA). Disponível em: <a href="https://www.alura.com.br/artigos/como-criar-inteligencia-artificial-ia" target="_blank" rel="noopener">alura.com.br</a>. Acesso em: 8 set. 2026.</p>
+            </div>
+        </section>
 
+    </main>
 
-            <section id="conclusao">
-                <h2>Conclusão</h2>
-                <p>Como criar uma IA do zero envolve muitos passos que devem ser seguidos estritamente para que a IA
-                    funcione corretamente de forma consistente e resolva os problemas, é algo muito difícil e
-                    complicado.</p>
-                <p>Algumas ferramentas e plataformas podem ser utilizadas para facilitar o processo de criação. No
-                    mercado de trabalho, saber criar uma IA pode ser algo muito vantajoso, pois cada vez mais a IA está
-                    ganhando espaço no mercado de trabalho, sendo uma vantagem grande ter este conhecimento.</p>
-                <p>Alguns dos benefícios da IA incluem a melhoria da eficiência operacional, com a automação de tarefas
-                    repetitivas e rotineiras, a análise de grandes volumes de dados para identificar padrões e
-                    tendências, otimizar processos, reduzir erros e aumentar a produtividade.</p>
+    <footer class="rodape">
+        <p>Thulio Ruiz Gonzales · ETEC de Santa Isabel · Outubro de 2026</p>
+    </footer>
 
-                <div class="referencias">
-                    <h3>Referências</h3>
-                    <p>Alura. Como criar inteligência artificial (IA). Disponível em: <a
-                            href="https://www.alura.com.br/artigos/como-criar-inteligencia-artificial-ia">alura.com.br</a>.
-                        Acesso em: 8 set. 2026.</p>
-                </div>
-            </section>
-
-        </main>
-
-
-        <footer class="rodape">
-            <p>Thulio Ruiz Gonzales · ETEC de Santa Isabel · Outubro de 2026</p>
-        </footer>
-
-    </body>
+</body>
 
 </html>
