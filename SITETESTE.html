@@ -1,212 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agente de IA</title>
-        <link rel="stylesheet" href="css/claude.css">
-        <link rel="icon" href="Img/agentes-ia/claudelogo2.webp">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Introdução ao Claude, o assistente de IA criado pela Anthropic.">
+    <title>Claude - Introdução</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="css/claude.css">
+    <link rel="icon" href="claudelogo2.webp">
+</head>
 
-    <body>
+<body>
 
-        <nav class="barramenu">
-            <figure class="logo">
-                <img src="Img/agentes-ia/claudelogo2.webp" height="40" width="40" alt="Logotipo do Claude">
+    <header>
+        <nav aria-label="Menu principal">
+            <a class="logo" href="#inicio">
+                <img src="claudelogo2.webp" alt="">
                 Claude
-            </figure>
-            <ul class="nav-links">
-                <li><a href="https://www.anthropic.com/">Criadores</a></li>
-                <li><a href="https://pt.wikipedia.org/wiki/Claude">Sobre</a></li>
-                <li><a href="https://claude.com/product/claude-code">Agente</a></li>
-                <li><a href="https://claude.com/">IA</a></li>
+            </a>
+            <input type="checkbox" id="menu" aria-label="Abrir menu">
+            <label for="menu"></label>
+            <ul>
+                <li><a href="index.html">Historia-1950</a></li>
+                <li><a href="ML.HTML">Machine Learning-2000</a></li>
+                <li><a href="DL.html">Deep Learning-2010</a></li>
+                <li><a href="PrincipaisIAs.html">Principais IAs-2012</a></li>
+                <li><a href="construção.html">Construção das IAs-2017</a></li>
+                <li><a href="ia_bd.html">Banco de Dados na IA-2020</a></li>
+                <li><a href="chat.html">ChatBots-2022</a></li>
+                <li><a href="Pesquisas/Pesquisas.zip" download="Pesquisas.zip">Baixar Pesquisa</a></li>
+                <li><a href="#">Proximo Agente</a></li>
             </ul>
         </nav>
-        <header class="principal">
-            <img src="Img/agentes-ia/claudelogo.png" alt="Logotipo do Claude" height="200" width="200">
-            <h1 class="console-container">
-                <span id="texto"></span><span class="console-underscore">_</span>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio" aria-labelledby="t-inicio">
+            <figure class="img"><img src="claudelogo.png" alt="Logo do Claude"></figure>
+            <h1 id="t-inicio" aria-label="Claude: IA que entende você">
+                <span style="--n:27; --i:0" aria-hidden="true">Claude: IA que entende você</span>
+                <span style="--n:21; --i:1" aria-hidden="true">Pensado para aprender</span>
+                <span style="--n:20; --i:2" aria-hidden="true">Feito pela Anthropic</span>
             </h1>
-        </header>
+            <p>Claude é um assistente de IA criado pela Anthropic. Ele conversa, explica, escreve e ajuda você a
+                resolver problemas, do trabalho de escola ao seu próximo projeto.</p>
+            <a class="botao" href="#sobre">Conhecer</a>
+        </section>
 
-        <form class="textbar" onsubmit="return false">
-            <label class="textbar-sr" for="textbar-input">Mensagem para o Claude</label>
-            <textarea id="textbar-input" class="textbar-input" rows="1"
-                placeholder="Como posso ajudar você hoje?"></textarea>
-
-            <div class="textbar-acoes">
-                <button type="button" class="textbar-btn textbar-btn-icone" aria-label="Adicionar arquivo">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"
-                        stroke-linecap="round" aria-hidden="true">
-                        <path d="M12 5v14M5 12h14" />
-                    </svg>
-                </button>
-
-                <div class="textbar-direita">
-                    <button type="button" class="textbar-btn textbar-modelo" aria-label="Escolher modelo">
-                        Sonnet 5.5
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
-                    </button>
-
-                    <button type="submit" class="textbar-btn textbar-enviar" aria-label="Enviar mensagem">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M12 19V5M5 12l7-7 7 7" />
-                        </svg>
-                    </button>
-                </div>
+        <section class="bloco" id="sobre" aria-labelledby="t-sobre">
+            <div>
+                <h2 id="t-sobre">Quem é o Claude</h2>
+                <p>Claude é um assistente de inteligência artificial criado pela Anthropic, uma empresa de pesquisa em
+                    segurança de IA. Você escreve em linguagem normal, como mandaria uma mensagem para um amigo, e ele
+                    responde na hora.</p>
+                <p>Por trás dele existe um modelo de linguagem, que aprendeu padrões a partir de uma enorme quantidade
+                    de textos. Isso permite que ele entenda o que você pergunta, explique assuntos diferentes e escreva
+                    textos novos.</p>
+                <p>A Anthropic quer que o Claude seja útil, honesto e inofensivo. Na prática, ele tenta explicar com
+                    clareza, admitir quando não tem certeza e recusar pedidos que possam machucar alguém.</p>
             </div>
-        </form>
+            <figure class="img"><img src="" alt=""></figure>
+        </section>
 
-        <script>
-            const frases = [
-                "Claude - Um agente de IA revolucionário",
-                "Claude - Seu assistente inteligente",
-                "Claude - Feito pela Anthropic"
-            ];
-            const alvo = document.getElementById("texto");
-            let frase = 0,
-                letra = 0,
-                apagando = false;
+        <section class="bloco" id="estudar" aria-labelledby="t-estudar">
+            <div>
+                <h2 id="t-estudar">Ajuda para estudar</h2>
+                <p>Estudar sozinho fica mais fácil quando você pode perguntar quantas vezes precisar. Claude explica um
+                    tema do começo, sem pressa, e muda o jeito de explicar se você não entendeu.</p>
+                <p>Você pode pedir exemplos do dia a dia, comparações com coisas que já conhece ou um resumo antes da
+                    prova. Também dá para pedir que ele faça perguntas para você, como um teste de treino.</p>
+                <ul>
+                    <li>Explica conceitos passo a passo</li>
+                    <li>Cria exercícios e questionários</li>
+                    <li>Resume textos e capítulos</li>
+                    <li>Corrige e comenta suas respostas</li>
+                </ul>
+                <p>Um cuidado: use o Claude para entender a matéria, não só para copiar a resposta. Quem entende o
+                    conteúdo vai melhor na prova.</p>
+            </div>
+            <figure class="img"><img src="" alt=""></figure>
+        </section>
 
-            function digitar() {
-                const atual = frases[frase];
-                alvo.textContent = atual.substring(0, letra);
+        <section class="bloco" id="codigo" aria-labelledby="t-codigo">
+            <div>
+                <h2 id="t-codigo">Parceiro de código</h2>
+                <p>Claude escreve, revisa e explica código em várias linguagens, como Python, JavaScript, Java, <abbr
+                        title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>.
+                    Cole um trecho que não funciona e ele aponta o que provavelmente está errado.</p>
+                <p>Ele também serve para aprender: pode explicar linha por linha o que um programa faz, mostrar outra
+                    forma de resolver o mesmo problema e sugerir melhorias de organização.</p>
+                <ul>
+                    <li>Explica o que cada trecho faz</li>
+                    <li>Encontra e corrige erros</li>
+                    <li>Sugere melhorias</li>
+                    <li>Ajuda a montar projetos do zero</li>
+                </ul>
+                <p>Para quem quer ir além, existe o <strong>Claude Code</strong>, uma ferramenta que trabalha direto no
+                    terminal e ajuda a programar dentro do próprio projeto. Sempre teste o código que receber, porque
+                    ele também pode errar.</p>
+            </div>
+            <figure class="img"><img src="" alt=""></figure>
+        </section>
 
-                let atraso = apagando ? 40 : 90;
+        <section class="bloco" id="criar" aria-labelledby="t-criar">
+            <div>
+                <h2 id="t-criar">Ideias e textos</h2>
+                <p>Travou na hora de começar um texto? Claude ajuda a transformar uma ideia solta em um roteiro, um
+                    título ou um parágrafo bem escrito. Você escolhe o tom: mais formal, mais leve ou mais direto.</p>
+                <p>Ele também revisa o que você já escreveu, corrigindo ortografia, cortando repetições e deixando as
+                    frases mais claras. O texto continua sendo seu; Claude só ajuda a polir.</p>
+                <ul>
+                    <li>Redações, resumos e e-mails</li>
+                    <li>Brainstorm de ideias e nomes</li>
+                    <li>Revisão de ortografia e estilo</li>
+                    <li>Roteiros para apresentações</li>
+                </ul>
+            </div>
+            <figure class="img"><img src="" alt=""></figure>
+        </section>
 
-                if (!apagando && letra === atual.length) {
-                    apagando = true;
-                    atraso = 1500;
-                } else if (apagando && letra === 0) {
-                    apagando = false;
-                    frase = (frase + 1) % frases.length;
-                    atraso = 500;
-                } else {
-                    letra += apagando ? -1 : 1;
-                }
-                setTimeout(digitar, atraso);
-            }
-            digitar();
+        <section class="bloco" id="pedir" aria-labelledby="t-pedir">
+            <div>
+                <h2 id="t-pedir">Como pedir melhor</h2>
+                <p>A qualidade da resposta depende muito da pergunta. Quanto mais contexto você der, melhor o resultado.
+                    Diga o que você quer, para quem é e em que formato.</p>
+                <p>Se a primeira resposta não ficou boa, não precisa recomeçar: peça para ajustar. Dá para dizer <q>mais
+                        curto</q>, <q>com um exemplo</q> ou <q>explique como se eu tivesse 12 anos</q>.</p>
+                <ul>
+                    <li>Diga o objetivo do pedido</li>
+                    <li>Informe seu nível, como iniciante ou avançado</li>
+                    <li>Peça o formato: lista, tabela ou texto corrido</li>
+                    <li>Ajuste a resposta com novas instruções</li>
+                </ul>
+            </div>
+            <figure class="img"><img src="" alt=""></figure>
+        </section>
 
-        </script>
-        <header class="Titles">
-            <h2>INTRODUÇÃO AO CLAUDE</h2>
-        </header>
-        <div class="LinhaIntro">
-            <main class="TextoBalao">
-                <img src="Img/agentes-ia/claudecode.webp" alt="Logotipo do Claude Code" height="30" width="40">
-                <P>Olá, eu sou o Claude. Seu assistente de IA favorito! Venha embarcar numa jornada de aprendizado e
-                    conhecimento no mundo das IAs!</P>
-            </main>
+        <section class="bloco" id="rotina" aria-labelledby="t-rotina">
+            <div>
+                <h2 id="t-rotina">No trabalho e no dia a dia</h2>
+                <p>Fora da escola, Claude ajuda a organizar tarefas, preparar reuniões, escrever mensagens difíceis e
+                    resumir documentos longos. É como ter um colega para pensar junto.</p>
+                <p>Ele também analisa informações: você pode enviar um texto ou uma tabela e pedir os pontos principais,
+                    os problemas ou as próximas ações.</p>
+                <p>A decisão final é sempre sua. Claude é uma ajuda, não um substituto para o seu julgamento.</p>
+            </div>
+            <figure class="img"><img src="" alt=""></figure>
+        </section>
 
-            <article class="TextoCaixa">
-                <h3>O QUE É O CLAUDE?</h3>
-                <p>Claude é uma família de grandes modelos de linguagem, desenvolvidos pela Anthropic. O primeiro modelo
-                    foi lançado em março de 2023. Claude 3, lançado em março de 2024, também pode analisar imagens.
-                    Os modelos Claude são desenvolvidos com foco em segurança e alinhamento, utilizando uma abordagem
-                    conhecida como “IA constitucional”, que busca orientar o comportamento do sistema com base em
-                    princípios definidos.</p>
+        <section class="centro" id="recursos" aria-labelledby="t-recursos">
+            <h2 id="t-recursos">O que ele faz de melhor</h2>
+            <p>Três jeitos de usar o Claude no dia a dia.</p>
+            <div class="cards">
+                <article>
+                    <figure class="img"><img src="" alt=""></figure>
+                    <h3>Conversa</h3>
+                    <p>Pergunte qualquer coisa e continue o assunto quanto quiser. Ele considera o que já foi dito na
+                        conversa, então você não precisa repetir tudo a cada mensagem.</p>
+                </article>
+                <article>
+                    <figure class="img"><img src="" alt=""></figure>
+                    <h3>Análise</h3>
+                    <p>Envie textos, tabelas ou imagens e peça um resumo, uma explicação ou uma opinião. Você também
+                        pode pedir que ele compare duas versões de um mesmo texto.</p>
+                </article>
+                <article>
+                    <figure class="img"><img src="" alt=""></figure>
+                    <h3>Criação</h3>
+                    <p>Peça textos, ideias, roteiros e códigos prontos para você ajustar do seu jeito. Se algo não
+                        agradar, é só dizer o que mudar.</p>
+                </article>
+            </div>
+        </section>
 
-                <h3>Chatbots</h3>
-                <p>O Claude é um chatbot de IA semelhante ao ChatGPT, capaz de escrever, programar, realizar pesquisas e
-                    manter conversas. Em junho de 2024, a Anthropic lançou o recurso Artifacts, permitindo que os
-                    usuários gerem e interajam com trechos de código e documentos. Em outubro de 2024, a empresa lançou
-                    a funcionalidade "computer use" (uso do computador), que permite ao Claude navegar por computadores
-                    interpretando o conteúdo da tela e simulando comandos de teclado e mouse. Em 2025, a Anthropic
-                    adicionou um recurso de pesquisa na Web ao Claude.</p>
-            </article>
-        </div>
-        <header class="Titles">
-            <h2>A HISTÓRIA DO CLAUDE</h2>
-        </header>
-        <div class="LinhaBalao">
-            <main class="TextoBalao">
-                <img src="Img/agentes-ia/claudecode.webp" alt="Logotipo do Claude Code" height="30" width="40">
-                <p>Agora que você já teve uma introdução sobre mim, vamos conhecer minha história e entender como
-                    cheguei até aqui e me tornei uma referência no mundo das IAs!</p>
-            </main>
-            <figure class="LogoAnthropic">
-                <img src="Img/agentes-ia/anthropic.jpg" alt="Logotipo da empresa Anthropic">
-            </figure>
-        </div>
+        <section class="centro" id="duvidas" aria-labelledby="t-duvidas">
+            <h2 id="t-duvidas">Perguntas frequentes</h2>
+            <p>Clique em uma pergunta para ver a resposta.</p>
+            <details>
+                <summary>O Claude sempre acerta?</summary>
+                <p>Não. Como qualquer IA, ele pode errar ou entender mal um pedido. Confira informações importantes em
+                    fontes confiáveis, principalmente datas, números e temas de saúde ou leis.</p>
+            </details>
+            <details>
+                <summary>Posso usar nos trabalhos da escola?</summary>
+                <p>Pode usar para entender o assunto, organizar ideias e revisar o texto. Copiar a resposta pronta não
+                    ajuda você a aprender, e muitas escolas têm regras sobre isso, então veja as da sua.</p>
+            </details>
+            <details>
+                <summary>Ele fala português?</summary>
+                <p>Sim. Claude conversa em português e em muitos outros idiomas, e também pode traduzir textos.</p>
+            </details>
+            <details>
+                <summary>Quem criou o Claude?</summary>
+                <p>A Anthropic, uma empresa de pesquisa em segurança de IA.</p>
+            </details>
+        </section>
 
-        <details class="TextoCaixaGrande">
-            <summary>CLIQUE AQUI PARA CONHECER</summary>
-            <p>A história da Claude, a inteligência artificial desenvolvida pela Anthropic, começa com uma dissidência
-                interna no coração do próprio Vale do Silício. Em 2021, um grupo de pesquisadores seniores da OpenAI,
-                liderado pelos irmãos Dario e Daniela Amodei, decidiu deixar a empresa devido a divergências
-                fundamentais sobre a direção estratégica e a segurança dos sistemas. Eles temiam que a corrida comercial
-                acelerada pudesse comprometer o desenvolvimento ético e seguro da inteligência artificial geral. Assim,
-                fundaram a Anthropic com uma missão clara: criar sistemas de IA que fossem não apenas poderosos, mas
-                acima de tudo confiáveis, honestos e inofensivos. O primeiro grande fruto dessa filosofia foi batizado
-                de Claude, em homenagem a Claude Shannon, o pai da teoria da informação.
-                Para diferenciar o Claude de outros modelos de linguagem do mercado, a Anthropic desenvolveu uma
-                abordagem inovadora chamada Constitucional AI. Em vez de depender exclusivamente do feedback humano
-                tradicional para alinhar o comportamento do robô — o que muitas vezes pode introduzir vieses ou
-                inconsistências —, os engenheiros deram ao Claude uma "constituição" explícita. Trata-se de um conjunto
-                de princípios baseados em documentos como a Declaração Universal dos Direitos Humanos e diretrizes de
-                grandes empresas de tecnologia. Durante o treinamento, o próprio sistema avalia as suas respostas e se
-                corrige para garantir que elas não sejam tóxicas, preconceituosas ou perigosas. Essa fundação ética
-                tornou o Claude conhecido desde o início por sua personalidade polida, cautelosa e intelectualmente
-                honesta, admitindo suas limitações com facilidade. <br> O lançamento oficial do Claude ocorreu no início
-                de 2023, inicialmente disponibilizado para parceiros comerciais e integrado a ferramentas de
-                produtividade. À medida que o modelo evoluía, ele se destacava por uma capacidade técnica muito
-                específica: uma janela de contexto massiva. Enquanto os concorrentes conseguiam processar apenas algumas
-                páginas de texto por vez, o Claude foi atualizado para ler e analisar livros inteiros, relatórios
-                financeiros complexos e extensos códigos de programação em uma única requisição. Essa vantagem
-                competitiva atraiu a atenção de gigantes da tecnologia, resultando em investimentos multibilionários da
-                Google e da Amazon, que passaram a fornecer a infraestrutura de nuvem necessária para escalar a
-                tecnologia globalmente. <br> O verdadeiro salto evolutivo aconteceu com o lançamento da família de
-                modelos Claude 3 e, posteriormente, as atualizações da linha 3.5. Com essas versões, a IA da Anthropic
-                deixou de ser apenas uma alternativa segura para se tornar uma líder indiscutível em termos de
-                raciocínio lógico, escrita criativa, matemática e codificação, superando frequentemente os principais
-                rivais em testes de referência da indústria. O modelo Claude 3.5 Sonnet, em particular, conquistou a
-                comunidade de desenvolvedores por sua velocidade e precisão ao gerar softwares e criar interfaces
-                visuais em tempo real por meio de um recurso interativo chamado Artifacts. Além disso, a introdução da
-                capacidade "Computer Use" permitiu que a IA controlasse diretamente o cursor de um computador para
-                executar tarefas humanas complexas. Hoje, o Claude é reconhecido globalmente não apenas como uma
-                ferramenta utilitária poderosa, mas como o principal símbolo de que o avanço tecnológico de ponta pode
-                caminhar lado a lado com a responsabilidade ética.</p>
-        </details>
+        <section class="centro" id="chat" aria-labelledby="t-chat">
+            <h2 id="t-chat">Pronto para conversar?</h2>
+            <p>Digite uma pergunta para começar.</p>
+            <form action="#chat">
+                <label class="sr" for="mensagem">Mensagem para o Claude</label>
+                <textarea id="mensagem" name="mensagem" rows="1" placeholder="Como posso ajudar você hoje?"></textarea>
+                <div class="acoes">
+                    <button type="button" aria-label="Adicionar arquivo">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>
+                    </button>
+                    <div>
+                        <button type="button" aria-label="Escolher modelo">
+                            Sonnet 5.5
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <button type="submit" aria-label="Enviar mensagem">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
 
-        <header class="Titles">
-            <h2>O LEGADO</h2>
-        </header>
+    </main>
 
-        <main class="TextoBalao">
-            <img src="Img/agentes-ia/claudecode.webp" alt="Logotipo do Claude Code" height="30" width="40">
-            <p>A minha história é rica em propósito e inovação. Chegou a hora de entendermos os meus maiores marcos e
-                transformações no mundo digital.</p>
-        </main>
+    <footer>
+        <p>Claude é feito pela <a href="https://www.anthropic.com/">Anthropic</a></p>
+    </footer>
 
-        <details class="TextoCaixaGrande">
-            <summary>CLIQUE AQUI PARA CONHECER</summary>
-            <p>Desde o seu lançamento inicial, o Claude redefiniu as expectativas do mercado ao introduzir o conceito de
-                IA Constitucional, uma abordagem pioneira que treina o modelo para ser útil, honesto e inofensivo com
-                base em um conjunto de princípios reguladores, mitigando preconceitos e respostas prejudiciais de forma
-                nativa.
-                À medida que o desenvolvimento avançava, a Anthropic quebrou barreiras de processamento com o Claude 2
-                e, posteriormente, com a revolucionária família Claude 3. Uma das maiores conquistas técnicas da linha
-                foi a expansão sem precedentes da janela de contexto para 200 mil tokens, permitindo que o modelo
-                processasse e analisasse livros inteiros, códigos complexos e extensos relatórios financeiros em
-                segundos, mantendo uma precisão de recuperação de dados quase perfeita. Com a chegada do Claude 3 Opus,
-                Sonnet e Haiku, a inteligência integrada deu um salto massivo, superando concorrentes históricos em
-                raciocínio de nível de pós-graduação, matemática, codificação e fluência em múltiplos idiomas.<br>
-                O ecossistema se transformou visual e operacionalmente com a introdução dos "Artifacts", uma inovação de
-                interface que permitiu aos usuários interagir com códigos, documentos e designs gerados pela IA em uma
-                janela dedicada em tempo real, transformando o Claude de um simples chatbot para um ambiente de
-                desenvolvimento colaborativo. O ápice dessa jornada de inovação se consolidou com o recurso "Computer
-                Use" na versão Claude 3.5 Sonnet, capacitando a inteligência artificial a interagir diretamente com
-                telas de computador, mover o cursor, clicar em botões e digitar comandos como um ser humano faria. Essa
-                capacidade de automação geral consolidou o Claude não apenas como um assistente de conversação, mas como
-                um agente autônomo pioneiro no desenvolvimento de software e na execução de tarefas digitais complexas.
-            </p>
-        </details>
-    </body>
+</body>
 
 </html>
