@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemini: a IA multimodal do Google</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stylegemini.css">
+</head>
+<body>
+<input type="checkbox" id="tema" class="sr">
+
+<header>
+<div class="wrap bar">
+<a class="brand" href="#topo"><img src="gemini.png" alt="Logo do Gemini">Gemini</a>
+<nav><a href="#funciona">Como funciona</a><a href="#recursos">Recursos</a><a href="#duvidas">Dúvidas</a></nav>
+<label class="toggle" for="tema" role="button" tabindex="0"></label>
+</div>
+</header>
+
+<main id="topo">
+<div class="hero"><div class="wrap hero-grid">
+<div>
+<h1>Gemini, a IA que entende tudo ao mesmo tempo.</h1>
+<p>Texto, imagem, áudio, vídeo e código em uma só conversa. Criada pelo Google para ajudar você a aprender, criar e resolver.</p>
+<div class="btns"><a class="btn main" href="#funciona">Entender como funciona</a><a class="btn ghost" href="#recursos">Ver recursos</a></div>
+</div>
+<div class="chat" aria-hidden="true">
+<div class="chat-top"><i></i><i></i><i></i></div>
+<div class="msg u">Monte um plano de estudos de 4 semanas para inglês.</div>
+<div class="msg g"><img src="gemini.png" alt=""><div>Pronto! Aqui vai um resumo:<ul><li>Semana 1: vocabulário essencial</li><li>Semana 2: escuta e pronúncia</li><li>Semana 3: conversação guiada</li><li>Semana 4: revisão e teste</li></ul></div></div>
+<div class="input">Pergunte ao Gemini<span class="send"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span></div>
+</div>
+</div></div>
+
+<section id="funciona"><div class="wrap">
+<h2>Como o Gemini age</h2>
+<p class="lead">Escolha uma aba e veja o essencial em poucos passos.</p>
+<input type="radio" name="t" id="t1" class="sr" checked>
+<input type="radio" name="t" id="t2" class="sr">
+<input type="radio" name="t" id="t3" class="sr">
+<div class="tabs"><label for="t1">Funcionamento</label><label for="t2">Importância</label><label for="t3">Diferenciais</label></div>
+<div class="panels">
+<div class="panel" id="p1">
+<div class="step"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg></div><h3>Você pergunta</h3><p>Escreva, fale ou envie uma foto, arquivo ou vídeo.</p></div>
+<div class="step"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg></div><h3>O modelo interpreta</h3><p>Um modelo multimodal entende o contexto de vários formatos juntos.</p></div>
+<div class="step"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></div><h3>Você recebe a resposta</h3><p>Texto, tabelas, código ou ideias, prontos para refinar na conversa.</p></div>
+</div>
+<div class="panel" id="p2">
+<div class="stat"><b>Multimodal</b>Une texto, imagem, áudio e vídeo.</div>
+<div class="stat"><b>Integrado</b>Presente em Android, Busca e Workspace.</div>
+<div class="stat"><b>Acessível</b>Democratiza o acesso à criação e ao estudo.</div>
+</div>
+<div class="panel" id="p3">
+<div class="step"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12h8M12 8v8"/></svg></div><h3>Ecossistema Google</h3><p>Conecta Gmail, Drive, Docs e Maps ao seu pedido.</p></div>
+<div class="step"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3>Contexto longo</h3><p>Analisa documentos grandes de uma só vez.</p></div>
+<div class="step"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></div><h3>Atualizado</h3><p>Pode consultar informações recentes da web.</p></div>
+</div>
+</div>
+</div></section>
+
+<section id="recursos"><div class="wrap">
+<h2>Galeria de recursos</h2>
+<p class="lead">Passe o mouse ou foque nos cards para ver exemplos.</p>
+<div class="gallery">
+<div class="card" tabindex="0"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20l4-1L19 8l-3-3L5 16z"/></svg></div><h3>Escrever</h3><p>E-mails, textos e roteiros.</p><div class="more">Ex.: "Reescreva este e-mail de forma mais gentil."</div></div>
+<div class="card" tabindex="0"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div><h3>Programar</h3><p>Gera, explica e corrige código.</p><div class="more">Ex.: "Por que este loop não termina?"</div></div>
+<div class="card" tabindex="0"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-6-6-8 9"/></svg></div><h3>Ver imagens</h3><p>Descreve e analisa fotos.</p><div class="more">Ex.: Envie uma foto da geladeira e peça receitas.</div></div>
+<div class="card" tabindex="0"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 00-3 3v6a3 3 0 006 0V6a3 3 0 00-3-3zM5 11a7 7 0 0014 0M12 18v3"/></svg></div><h3>Conversar por voz</h3><p>Diálogo natural e fluido.</p><div class="more">Ex.: Treine uma entrevista de emprego falando.</div></div>
+<div class="card" tabindex="0"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 10h16M10 4v16"/></svg></div><h3>Organizar dados</h3><p>Tabelas, resumos e comparações.</p><div class="more">Ex.: "Compare estes três planos em uma tabela."</div></div>
+<div class="card" tabindex="0"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h6a3 3 0 013 3v12a2 2 0 00-2-2H4zM20 5h-6a3 3 0 00-3 3"/></svg></div><h3>Estudar</h3><p>Explica temas passo a passo.</p><div class="more">Ex.: "Explique fotossíntese como se eu tivesse 10 anos."</div></div>
+<div class="card" tabindex="0"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Ganhar tempo</h3><p>Resume textos longos.</p><div class="more">Ex.: Cole um artigo e peça 5 pontos-chave.</div></div>
+<div class="card" tabindex="0"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></svg></div><h3>Criar ideias</h3><p>Brainstorm sem bloqueio.</p><div class="more">Ex.: "Dê 10 nomes para minha loja de plantas."</div></div>
+</div>
+</div></section>
+
+<section id="duvidas"><div class="wrap">
+<h2>Perguntas rápidas</h2>
+<p class="lead">Clique para abrir.</p>
+<div class="faq">
+<details><summary>Quem criou o Gemini?</summary><p>O Google, por meio do Google DeepMind. Ele substituiu o antigo Bard.</p></details>
+<details><summary>O que "multimodal" significa?</summary><p>Significa entender e combinar vários tipos de informação, como texto, imagem, áudio e vídeo.</p></details>
+<details><summary>Posso confiar em tudo que ele responde?</summary><p>Não sempre. Como toda IA, ele pode errar. Confira fatos importantes em fontes confiáveis.</p></details>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap foot"><span>Página educativa sobre o Gemini.</span><span>Gemini é marca do Google LLC. Este site não tem vínculo oficial.</span></div></footer>
+</body>
+</html>
