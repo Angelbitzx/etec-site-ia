@@ -1,535 +1,376 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/* Estilos gerais */
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background: linear-gradient(to bottom, #ffffff, #d3cfcf);
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
+    min-width: 320px;
     min-height: 100vh;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    padding-top: 80px;
-    /* Espaço para o cabeçalho fixo */
-}
-
-#cabecalho {
-    box-shadow: 1px 1px 30px 1px #5a5959;
-    background-color: #dae0e0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
-    /* Garante que o padding não estoure a largura */
-}
-
-/* ==========================================================================
-   CONFIGURAÇÃO DO MENU RETRÁTIL (CLIQUE CSS)
-   ========================================================================== */
-#navegacao {
-    border: none;
-    background: transparent;
-    width: 25px;
-    height: 25px;
-    padding: 0;
-    cursor: pointer;
-    margin-right: 30px;
-    position: relative;
-    /* Serve de âncora para posicionar o menu suspenso */
-}
-
-#navegacao:hover .icone_menu {
-    opacity: 0.8;
-}
-
-/* Esconde o checkbox real da tela */
-#menu_checkbox {
-    display: none;
-}
-
-/* Transforma o ícone do menu em área clicável */
-.menu_label {
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.icone_menu {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-/* Estilização da caixa flutuante do menu */
-.menu-lista {
-    display: none;
-    /* Escondido por padrão */
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    position: absolute;
-    top: 40px;
-    /* Posiciona abaixo do cabeçalho */
-    right: 0;
-    /* Alinha na direita certinho */
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    width: 180px;
-    z-index: 1100;
-}
-
-/* Estilo dos links do menu */
-.menu-lista li a {
-    display: block;
-    padding: 12px 20px;
-    text-decoration: none;
-    color: #333333;
-    font-size: 16px;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-}
-
-.menu-lista li a:hover {
-    background-color: #f0f2f2;
-    color: #000000;
-}
-
-#menu_checkbox:checked~.menu-lista {
-    display: block;
-}
-
-/* ========================================================================== */
-
-#arealogo {
-    margin: 0px;
-    display: flex;
-    align-items: center;
-    padding: 0px;
-}
-
-.logo {
-    width: 60px;
-    height: 60px;
-    margin: 0px;
-    padding: 0px;
-}
-
-#nome_logo {
-    font-size: 40px;
-}
-
-/* EFEITO DIGITAR */
-#titulo_principal {
-    text-align: center;
-    font-size: clamp(1.5rem, 6vw, 80px);
-    margin-top: clamp(60px, 11vw, 150px);
-    color: #333;
-    font-family: 'Inter', monospace;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #333;
-    width: 21ch;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    animation:
-        digitar 3s steps(21, end),
-        piscar-cursor 0.75s step-end infinite;
-}
-
-@keyframes digitar {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 21ch;
-    }
-}
-
-@keyframes piscar-cursor {
-
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: #333;
-    }
-}
-
-#caixa {
-    display: flex;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0px 10px 10px rgba(145, 16, 243, 0.37);
-}
-
-#texto_caixa {
-    font-size: 18px;
-    color: #5a6163e1;
+    background: #edf4fa;
+    color: #263a4d;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    margin-left: 20px;
+}
+
+/* Cabeçalho e menu */
+#cabecalho {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px max(24px, calc((100% - 1080px) / 2));
+    background: #ffffff;
+    border-bottom: 1px solid #d7e5ef;
+}
+
+.marca-cabecalho {
+    color: #225e89;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#navegacao {
+    position: relative;
+}
+
+#menu_checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.menu_label {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.linha-menu {
+    width: 22px;
+    height: 2px;
+    background: #225e89;
+}
+
+.menu-lista {
+    position: absolute;
+    top: 46px;
+    right: 0;
+    display: none;
+    width: 250px;
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+    background: #ffffff;
+    border: 1px solid #d7e5ef;
+}
+
+.menu-lista a {
+    display: block;
+    padding: 9px 10px;
+    color: #263a4d;
+    text-decoration: none;
+}
+
+.menu-lista a:hover,
+.menu-lista a:focus-visible {
+    background: #edf4fa;
+    color: #225e89;
+}
+
+#menu_checkbox:checked ~ .menu-lista {
+    display: block;
+}
+
+/* Abertura da página */
+main {
+    width: calc(100% - 48px);
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.abertura {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 32px;
+    margin: 36px 0;
+    padding: 28px;
+    background: #ffffff;
+}
+
+#imagem_principal {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.abertura-conteudo {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#titulo_principal {
+    margin: 0 0 16px;
+    color: #225e89;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.1;
+}
+
+.resumo-abertura {
+    max-width: 420px;
+    margin: 0;
+    color: #526a7f;
+    font-size: 17px;
+}
+
+/* Cartões de conteúdo */
+.layout_caixa {
+    display: flex;
+    align-items: stretch;
+    gap: 28px;
+    margin: 0 0 22px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d7e5ef;
+    border-radius: 8px;
 }
 
 .pesquisas {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 650px;
-    margin: 0;
-    padding: 20px;
+    flex: 1 1 60%;
+    align-self: center;
+    padding: 30px 0 30px 32px;
 }
 
 .titulo_pesquisas {
-    font-weight: 550;
-    font-size: 40px;
-    margin: 0;
-    padding: 0;
-    color: #000000;
-    margin-bottom: 10px;
+    margin: 0 0 12px;
+    color: #225e89;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    line-height: 1.25;
 }
 
 .conteudo {
-    font-size: 18px;
-    color: #000000;
-    line-height: 1.8;
-    text-align: left;
+    margin: 0 0 12px;
+    color: #526a7f;
+    font-size: 16px;
 }
 
-#areaimagem {
-    margin: 0px;
-    padding: 0px;
+.conteudo:last-child {
+    margin-bottom: 0;
 }
 
-.imagem {
-    border-radius: 50px 50px;
-    width: 550px;
-    padding: 30px;
-    box-sizing: border-box;
-    margin: 0;
+.conteudo strong {
+    color: #225e89;
 }
 
-/* --- BASE COMUM PARA TODOS OS LAYOUTS --- */
-#layout,
-#layout_2,
-#layout_3,
-#layout_4,
-#layout_5,
-#layout_6,
-#layout_7,
-#layout_8,
-#layout_9 {
+.areaimagem {
+    flex: 0 0 34%;
     display: flex;
-    justify-content: center;
+    min-height: 230px;
     align-items: center;
-    gap: 80px;
-    margin-top: 0;
-    padding: 60px 40px;
-    box-sizing: border-box;
+    justify-content: center;
+    margin: 0;
+    padding: 24px;
+    background: #e3eff8;
 }
 
-#layout {
-    margin-top: 60px;
+.conversa {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* --- BLOCO 1: Tema Google Gemini --- */
-#layout {
-    box-shadow: 0px -20px 30px 1px rgba(26, 115, 232, 0.575);
-    background-color: #1a1e29e0;
+#layout_1 .conversa {
+    width: calc(100% - 48px);
+    max-width: 310px;
 }
 
-#layout .titulo_pesquisas,
-#layout .conteudo {
-    color: #f1f3f4;
+.balao {
+    max-width: 90%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 14px;
 }
 
-#layout .imagem {
-    background: linear-gradient(135deg, #1a73e8, #7a22ff);
-    box-shadow: 0px 8px 50px rgba(122, 34, 255, 0.5);
+.balao-usuario {
+    align-self: flex-end;
+    background: #397fac;
+    color: #ffffff;
 }
 
-/* --- BLOCO 2: Tema ChatGPT / OpenAI (Invertido) --- */
-#layout_2 {
-    box-shadow: 0px -10px 30px 1px rgba(16, 163, 127, 0.2);
-    background-color: #202123e3;
-    flex-direction: row-reverse;
+.balao-chatbot {
+    align-self: flex-start;
+    background: #ffffff;
+    color: #263a4d;
 }
 
-#layout_2 .titulo_pesquisas,
-#layout_2 .conteudo {
-    color: #ececf1;
+.digitando {
+    display: flex;
+    gap: 4px;
+    align-self: flex-start;
+    padding: 10px 12px;
+    background: #ffffff;
 }
 
-#layout_2 .imagem {
-    background: linear-gradient(135deg, #10a37f, #0d1117);
-    box-shadow: 0px 8px 50px rgba(16, 163, 127, 0.5);
+.digitando i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7aa8c9;
 }
 
-/* --- BLOCO 3: Tema Claude / Anthropic --- */
+/* Cartão 1 */
+#layout_1 {
+    gap: 0;
+}
+
+#layout_1 .pesquisas {
+    flex: 1 1 66%;
+    padding-right: 28px;
+}
+
+#layout_1 .areaimagem {
+    flex: 0 0 34%;
+    align-self: stretch;
+    min-height: 0;
+    padding: 0;
+}
+
+/* Cartões 2 e 3 */
+.grade_dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.grade_dupla .cartao {
+    display: block;
+    margin: 0;
+    padding: 26px;
+}
+
 #layout_3 {
-    box-shadow: 0px -10px 30px 1px rgba(217, 119, 6, 0.2);
-    background-color: #fbfaf7e0;
+    background: #e3eff8;
 }
 
-#layout_3 .titulo_pesquisas,
-#layout_3 .conteudo {
-    color: #191919;
-}
-
-#layout_3 .imagem {
-    background: linear-gradient(135deg, #f8f7f6, #a8a5a1);
-    box-shadow: 0px 8px 50px rgba(107, 105, 103, 0.4);
-}
-
-/* --- BLOCO 4: Tema Microsoft Copilot (Invertido) --- */
-#layout_4 {
-    box-shadow: 0px -10px 30px 1px rgba(0, 120, 212, 0.3);
-    background-color: #f3f2f1e6;
+/* Cartões 4, 6 e 8 */
+#layout_4,
+#layout_6,
+#layout_8 {
     flex-direction: row-reverse;
+}
+
+#layout_4 {
+    background: #225e89;
 }
 
 #layout_4 .titulo_pesquisas,
 #layout_4 .conteudo {
-    color: #323130;
-}
-
-#layout_4 .imagem {
-    background: linear-gradient(135deg, #0078d4, #e3008c, #ff8c00);
-    box-shadow: 0px 8px 60px rgba(0, 120, 212, 0.4);
-}
-
-/* --- BLOCO 5: Tema Meta AI --- */
-#layout_5 {
-    box-shadow: 0px -10px 30px 1px rgba(0, 129, 255, 0.4);
-    background-color: #060b1ae6;
-}
-
-#layout_5 .titulo_pesquisas,
-#layout_5 .conteudo {
     color: #ffffff;
 }
 
-#layout_5 .imagem {
-    background: radial-gradient(circle, #0081ff, #002554);
-    box-shadow: 0px 0px 60px rgba(0, 129, 255, 0.7);
+#layout_4 .conteudo strong {
+    color: #d7eafa;
 }
 
-/* --- BLOCO 6: Tema Midjourney (Invertido) --- */
-#layout_6 {
-    box-shadow: 0px -10px 30px 1px #000000;
-    background-color: #0c0c0fe3;
-    flex-direction: row-reverse;
-}
-
-#layout_6 .titulo_pesquisas,
-#layout_6 .conteudo {
-    color: #dfdfdf;
-}
-
-#layout_6 .imagem {
-    background: linear-gradient(180deg, #24243e, #0f0c1b);
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1), 0px 10px 40px rgba(0, 0, 0, 0.8);
-}
-
-/* --- BLOCO 7: Tema Perplexity AI --- */
-#layout_7 {
-    box-shadow: 0px -10px 30px 1px rgba(34, 143, 143, 0.2);
-    background-color: #191c1dc2;
-}
-
-#layout_7 .titulo_pesquisas,
-#layout_7 .conteudo {
-    color: #e1e3e3;
-}
-
-#layout_7 .imagem {
-    background: linear-gradient(135deg, #228f8f, #134e4e);
-    box-shadow: 0px 8px 50px rgba(34, 143, 143, 0.5);
-}
-
-/* --- BLOCO 8: Tema DeepSeek (Invertido) --- */
-#layout_8 {
-    box-shadow: 0px -10px 30px 1px rgba(58, 110, 237, 0.3);
-    background-color: #ffffff;
-    flex-direction: row-reverse;
-}
-
-#layout_8 .titulo_pesquisas,
-#layout_8 .conteudo {
-    color: #1e293b;
-}
-
-#layout_8 .imagem {
-    background: linear-gradient(135deg, #030a1b, #051236);
-    box-shadow: 0px 10px 40px rgba(19, 39, 90, 0.877);
-}
-
-/* --- BLOCO 9: Tema Grok / xAI --- */
-#layout_9 {
-    box-shadow: 0px -10px 30px 1px rgba(255, 255, 255, 0.05);
-    background-color: #000000;
-}
-
-#layout_9 .titulo_pesquisas,
-#layout_9 .conteudo {
-    color: #ffffff;
-}
-
-#layout_9 .imagem {
-    background: linear-gradient(135deg, #111111, #222222);
-    border: 1px solid #333;
-    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.1);
-}
-
+/* Rodapé */
 #rodape {
-    text-align: center;
-    padding: 20px;
-    background-color: #dae0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
     margin-top: auto;
-    border-top: 1px solid #ccc;
-    box-shadow: 1px -10px 30px 1px #5a5959;
+    padding: 22px max(24px, calc((100% - 1080px) / 2));
+    background: #183c5b;
+    color: #ffffff;
 }
 
-/* ==========================================================================
-   RESPONSIVIDADE
-   ========================================================================== */
-@media (max-width: 1280px) {
-
-    #layout,
-    #layout_2,
-    #layout_3,
-    #layout_4,
-    #layout_5,
-    #layout_6,
-    #layout_7,
-    #layout_8,
-    #layout_9 {
-        gap: 40px;
-        padding: 50px 24px;
-    }
-
-    .pesquisas {
-        flex: 1 1 0;
-        width: auto;
-        min-width: 0;
-        max-width: 650px;
-    }
-
-    .areaimagem {
-        flex: 0 1 460px;
-        min-width: 0;
-        margin: 0;
-    }
-
-    .imagem {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
+#rodape p {
+    margin: 0;
+    font-size: 14px;
 }
 
-@media (max-width: 1100px) {
-    .titulo_pesquisas {
-        font-size: 34px;
-    }
+#rodape a {
+    color: #d7eafa;
+    font-size: 14px;
+    text-decoration: none;
 }
 
-@media (max-width: 900px) {
-
-    /* texto em cima e imagem embaixo, em todos os blocos */
-    #layout,
-    #layout_2,
-    #layout_3,
-    #layout_4,
-    #layout_5,
-    #layout_6,
-    #layout_7,
-    #layout_8,
-    #layout_9 {
-        flex-direction: column;
-        gap: 24px;
-        padding: 40px 20px;
-    }
-
-    .pesquisas {
-        flex: none;
-        width: 100%;
-        max-width: none;
-        padding: 0;
-    }
-
-    .areaimagem {
-        flex: none;
-        width: 100%;
-        max-width: 480px;
-    }
-
-    #caixa {
-        margin: 20px 16px;
-    }
+#rodape a:hover {
+    text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-    body {
-        padding-top: 64px;
-    }
-
+/* Ajustes para celular */
+@media (max-width: 700px) {
     #cabecalho {
-        padding: 8px 14px;
+        padding: 8px 16px;
     }
 
-    .logo {
-        width: 44px;
-        height: 44px;
+    main {
+        width: calc(100% - 32px);
     }
 
-    #nome_logo {
-        font-size: 28px;
-    }
-
-    #navegacao {
-        margin-right: 6px;
-    }
-
-    .menu-lista {
-        top: 36px;
-        width: min(220px, calc(100vw - 28px));
-    }
-
-    #texto_caixa {
-        font-size: 16px;
-        margin-left: 10px;
-    }
-
-    .titulo_pesquisas {
-        font-size: 26px;
-    }
-
-    .conteudo {
-        font-size: 16px;
-        line-height: 1.7;
-    }
-
-    .imagem {
+    .abertura {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 20px 0;
         padding: 20px;
-        border-radius: 32px;
     }
 
-    #layout {
-        margin-top: 40px;
+    #imagem_principal,
+    .abertura-conteudo {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    #imagem_principal {
+        height: 220px;
+    }
+
+    .grade_dupla {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .layout_caixa,
+    #layout_4,
+    #layout_6,
+    #layout_8 {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 16px;
+    }
+
+    .pesquisas,
+    .grade_dupla .cartao {
+        padding: 22px;
+    }
+
+    .areaimagem {
+        flex-basis: auto;
+        min-height: 170px;
+    }
+
+    #rodape {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px 16px;
     }
 }
