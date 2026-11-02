@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Entenda o que são agentes de inteligência artificial, como eles trabalham e onde podem ser usados.">
+    <meta name="theme-color" content="#f4f1e8">
+    <title>Agentes de inteligência artificial | 1ºINFO</title>
+    <link rel="stylesheet" href="css/agentes.css">
+    <link rel="icon" href="Img/Logo-site/logo.png" type="image/png">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao" aria-label="Navegação principal">
+            <a class="marca marca-claude" href="index.html" aria-label="Página inicial do projeto">
+                <img class="marca-imagem" src="Img/chat/claude.svg" alt="">
+                <span>Claude</span>
+            </a>
+            <details class="menu">
+                <summary class="menu-rotulo"><span class="menu-icone" aria-hidden="true"></span>Explorar</summary>
+                <section class="menu-painel" aria-label="Conteúdos do projeto">
+                    <header class="menu-cabecalho">
+                        <p class="menu-titulo">Conheça outros assuntos</p>
+                        <p>Uma introdução à inteligência artificial, das origens aos usos atuais.</p>
+                    </header>
+                    <ul class="menu-lista">
+                        <li>
+                            <a href="index.html">
+                                <span>História</span>
+                                <small>Como essa tecnologia surgiu</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ML.HTML">
+                                <span>Aprendizado de máquina</span>
+                                <small>Como os sistemas aprendem</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="DL.html">
+                                <span>Aprendizado profundo</span>
+                                <small>Redes que reconhecem padrões</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="construção.html">
+                                <span>Como as IAs são criadas</span>
+                                <small>Dados, treino e avaliação</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ia_bd.html">
+                                <span>Dados e inteligência artificial</span>
+                                <small>De onde vêm as informações</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <span>Assistentes de conversa</span>
+                                <small>Ferramentas para dialogar</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="agentes.html" aria-current="page">
+                                <span>Agentes de IA</span>
+                                <small>Sistemas que planejam e agem</small>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="menu-download" href="pesquisas/Pesquisas.zip" download>Baixar pesquisas<span aria-hidden="true">↓</span>
+                    </a>
+                </section>
+            </details>
+        </nav>
+    </header>
+
+    <main>
+        <section class="abertura" id="inicio" aria-labelledby="titulo-principal">
+            <header class="abertura-texto">
+                <p class="sobretitulo">Inteligência artificial em ação</p>
+                <h1 id="titulo-principal">Agentes de IA: da ideia à ação</h1>
+                <p class="abertura-resumo">Eles recebem um objetivo, planejam etapas e podem usar ferramentas para
+                    realizar tarefas. Entenda como funcionam — e por que ainda precisam de supervisão.</p>
+                <a class="botao" href="#o-que-sao">Conheça os agentes <span aria-hidden="true">↓</span></a>
+            </header>
+            <figure class="imagem-abertura">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"
+                    alt="Mesa de trabalho com computador portátil e itens de escritório" fetchpriority="high">
+                <figcaption>Agentes conectam instruções, ferramentas e tarefas do dia a dia.</figcaption>
+            </figure>
+        </section>
+
+        <section class="secao-conteudo" id="o-que-sao" aria-labelledby="titulo-o-que-sao">
+            <article class="texto-secao">
+                <p class="sobretitulo">Vamos por partes</p>
+                <h2 id="titulo-o-que-sao">O que é um agente de IA?</h2>
+                <p>É um sistema de inteligência artificial que recebe um objetivo e trabalha para alcançá-lo. Para
+                    isso, pode dividir a tarefa em etapas, consultar informações, usar ferramentas e conferir o
+                    resultado.</p>
+                <p>Um assistente de conversa costuma responder ao que você pergunta. Já um agente pode dar um próximo
+                    passo — como organizar uma pesquisa ou preparar um resumo — quando tem acesso às ferramentas
+                    necessárias e autorização para usá-las.</p>
+                <p class="nota">Nem todo agente faz tudo sozinho: suas capacidades dependem das instruções, das
+                    ferramentas disponíveis e dos limites definidos por quem o criou.</p>
+            </article>
+            <figure class="imagem-secao">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                    alt="Representação do planeta conectado por redes de informação" loading="lazy">
+                <figcaption>O agente combina informações e recursos para avançar em uma tarefa.</figcaption>
+            </figure>
+        </section>
+
+        <section class="secao-fluxo" aria-labelledby="titulo-fluxo">
+            <header class="cabecalho-secao">
+                <p class="sobretitulo">O caminho até o resultado</p>
+                <h2 id="titulo-fluxo">Como um agente trabalha?</h2>
+                <p>O processo pode mudar de acordo com a tarefa, mas geralmente segue algumas etapas.</p>
+            </header>
+            <ol class="etapas">
+                <li class="etapa">
+                    <span class="etapa-numero">01</span>
+                    <h3>Recebe um objetivo</h3>
+                    <p>Entende o que precisa ser feito e quais são as condições do pedido.</p>
+                </li>
+                <li class="etapa">
+                    <span class="etapa-numero">02</span>
+                    <h3>Organiza as etapas</h3>
+                    <p>Decide por onde começar e quais informações ou recursos podem ajudar.</p>
+                </li>
+                <li class="etapa">
+                    <span class="etapa-numero">03</span>
+                    <h3>Usa ferramentas</h3>
+                    <p>Quando autorizado, pode pesquisar, consultar arquivos ou executar ações.</p>
+                </li>
+                <li class="etapa">
+                    <span class="etapa-numero">04</span>
+                    <h3>Confere e responde</h3>
+                    <p>Avalia o que conseguiu fazer e apresenta o resultado para uma pessoa.</p>
+                </li>
+            </ol>
+            <p class="aviso-fluxo">Em tarefas mais complexas, o agente pode repetir etapas: conferir o que aconteceu,
+                ajustar o plano e tentar de novo.</p>
+        </section>
+
+        <section class="secao-conteudo secao-imagem-esquerda" id="no-dia-a-dia"
+            aria-labelledby="titulo-no-dia-a-dia">
+            <figure class="imagem-secao">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                    alt="Equipe colaborando em torno de uma mesa" loading="lazy">
+                <figcaption>Pessoas definem o objetivo e acompanham o trabalho do agente.</figcaption>
+            </figure>
+            <article class="texto-secao">
+                <p class="sobretitulo">Aplicações possíveis</p>
+                <h2 id="titulo-no-dia-a-dia">Onde eles podem ajudar?</h2>
+                <p>Agentes podem apoiar atividades que envolvem várias etapas. Em vez de só produzir uma resposta,
+                    eles ajudam a organizar o caminho até ela.</p>
+                <ul class="lista-aplicacoes">
+                    <li><strong>Estudos:</strong> reunir fontes, separar os pontos principais e montar um roteiro de
+                        revisão.</li>
+                    <li><strong>Atendimento:</strong> identificar a dúvida e encaminhar a pessoa para a informação
+                        adequada.</li>
+                    <li><strong>Rotina:</strong> organizar tarefas, resumir documentos e preparar listas de
+                        acompanhamento.</li>
+                    <li><strong>Criação:</strong> ajudar a planejar um projeto, testar ideias e revisar etapas.</li>
+                </ul>
+                <p>Esses exemplos dependem dos recursos e das permissões oferecidos a cada sistema.</p>
+            </article>
+        </section>
+
+        <section class="secao-recursos" id="cuidados" aria-labelledby="titulo-cuidados">
+            <header class="cabecalho-secao">
+                <p class="sobretitulo">Tecnologia com responsabilidade</p>
+                <h2 id="titulo-cuidados">O que vale lembrar</h2>
+                <p>Um agente pode ser útil, mas não é infalível nem substitui o julgamento humano.</p>
+            </header>
+            <ul class="grade-cuidados">
+                <li>
+                    <article class="cartao-cuidado">
+                        <span class="icone-cartao" aria-hidden="true">01</span>
+                        <h3>Confira informações</h3>
+                        <p>O sistema pode interpretar algo errado ou apresentar dados incorretos. Verifique pontos
+                            importantes em fontes confiáveis.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="cartao-cuidado">
+                        <span class="icone-cartao" aria-hidden="true">02</span>
+                        <h3>Proteja seus dados</h3>
+                        <p>Evite compartilhar senhas, documentos pessoais ou informações privadas sem necessidade.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="cartao-cuidado">
+                        <span class="icone-cartao" aria-hidden="true">03</span>
+                        <h3>Acompanhe as ações</h3>
+                        <p>Antes de permitir que um agente envie, altere ou apague algo, entenda o que ele fará e aprove a
+                            ação.</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section class="chamada-final" aria-labelledby="titulo-final">
+            <figure class="imagem-final">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                    alt="Pessoa trabalhando em um computador portátil" loading="lazy">
+            </figure>
+            <article class="texto-final">
+                <p class="sobretitulo">Em resumo</p>
+                <h2 id="titulo-final">A tecnologia ajuda. As escolhas continuam humanas.</h2>
+                <p>Agentes de IA podem facilitar tarefas e conectar diferentes ferramentas, mas precisam de objetivos
+                    claros, limites seguros e acompanhamento.</p>
+                <a class="link-voltar" href="#inicio">Voltar ao começo↑</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <a class="marca" href="index.html" aria-label="1ºINFO, página inicial">
+            <span class="marca-numero">1º</span><span>INFO<span class="marca-ponto">.</span></span>
+        </a>
+        <a href="mailto:etecprojetoinfo@gmail.com">Contate-nos</a>
+    </footer>
+</body>
+</html>

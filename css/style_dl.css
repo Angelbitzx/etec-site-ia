@@ -12,6 +12,7 @@
 }
 
 /* Reset básico para evitar rolagens indesejadas */
+
 * {
     box-sizing: border-box;
 }
