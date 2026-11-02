@@ -12,7 +12,8 @@
 <body>
     <header class="cabecalho">
         <div class="topo">
-            <a href="DL.html" target="_self"><img src="Img/deep_learning.png" alt="Logo da página." id="logo"></a>
+            <a href="DL.html" target="_self"><img src="Img/deep-learning/deep_learning.png" alt="Logo da página."
+                    id="logo"></a>
             <div class="container-pesquisa">
                 <input type="text" class="barra-pesquisa" aria-label="Pesquisar">
                 <button class="botao-pesquisa" type="button">Pesquisar</button>
@@ -22,7 +23,7 @@
     </header>
 
     <nav class="menu" aria-label="Navegação principal">
-        <a href="Index.html">1950</a>
+        <a href="index.html">1950</a>
         <a href="ML.HTML">Retornar para 2000</a>
         <a href="PrincipaisIAs.html">2012</a>
         <a href="pesquisas/dl.docx" download>Baixar Pesquisa (.docx)</a>
@@ -57,35 +58,35 @@
                 <h2 id="definicao-deep-learning">Definição de deep learning</h2>
                 <hr>
                 <figure class="topico">
-                    <img src="Img/rede.png" width="200" alt="Conceitos de IA e ML">
                     <p><i>Deep learning</i>, ou "aprendizado profundo", é um subconjunto do <i>machine learning</i>, em
                         que são criadas redes neurais artificiais, algoritmos modelados para o funcionamento do código
                         como um cérebro humano. Esses algoritmos aprendem com grandes quantidades de dados.</p>
+                    <img src="Img/deep-learning/rede.png" width="200" alt="Conceitos de IA e ML">
                 </figure>
                 <hr>
                 <h3>Como o deep learning funciona?</h3>
-                <figure class="topico">
+                <figure class="topico topico--inverso">
                     <p>O <i>deep learning</i> é desenvolvido por camadas de redes neurais, que são algoritmos modelados
                         livremente assim como os cérebros humanos funcionam. O resultado desse código é um software que,
                         uma vez treinado, começa a processar novos dados. Esses modelos de aprendizado absorvem
                         informações de várias fontes de dados e analisam esses dados em tempo real, sem a necessidade de
                         um humano o ajudando.</p>
-                    <img src="Img/deeplearning.webp" width="200" alt="Esquema de IA, DL e ML">
+                    <img src="Img/deep-learning/ai-ml-dl.svg" width="400" alt="Esquema de IA, DL e ML">
                 </figure>
                 <hr>
                 <h3>Qual é a diferença entre deep learning e redes neurais?</h3>
                 <figure class="topico">
-                    <img src="Img/deep_neural_network.png" width="600" alt="Redes neurais">
                     <p>Em termos simples, "aprendizado profundo" é um nome para redes neurais com muitas camadas. Para
                         essa rede neural artificial processar alguns dados, como fotos, áudios ou prompts, elas passam
                         por diversas camadas de nós interconectados.<br><br>Quando um dado passa por uma camada, ela
                         executa uma operação simples e o redireciona para outros nós, até que a rede crie a saída, assim
                         tornando dados mais precisos, e as GPUs são otimizadas para cálculo de dados e projetadas para
                         um desempenho rápido de cálculos.</p>
+                    <img src="Img/deep-learning/neural-network.svg" width="400" alt="Redes neurais">
                 </figure>
                 <hr>
                 <h3>Por que usar deep learning?</h3>
-                <figure class="topico">
+                <figure class="topico topico--inverso">
                     <ul>
                         <li>
                             <p><b>Análise de dados estruturados:</b> Os algoritmos de <i>deep learning</i> podem ser
@@ -106,12 +107,11 @@
                                 ele pode executar milhares de tarefas repetidas vezes, mais rápido que os humanos.</p>
                         </li>
                     </ul>
-                    <img src="Img/deep_learning_2.jpg" width="340" alt="Aprendizado profundo">
+                    <img src="Img/deep-learning/deep_learning_2.jpg" width="340" alt="Aprendizado profundo">
                 </figure>
                 <hr>
                 <h3>Implementação de modelos de deep learning</h3>
                 <figure class="topico">
-                    <img src="Img/codigo.webp" width="200" alt="Código-fonte">
                     <p>Há diversos códigos abertos para desenvolver modelos de <i>deep learning</i>, seja treinando um
                         modelo desde o zero ou realizando alguns ajustes finos em um modelo já pronto. Essas bibliotecas
                         de aprendizado de máquina oferecem uma variedade de modelos e fluxo de trabalho para construir,
@@ -130,7 +130,7 @@
                 <h2>Frameworks Populares</h2>
                 <p>Desenvolva e otimize redes neurais utilizando bibliotecas de código aberto populares como PyTorch,
                     TensorFlow e Hugging Face Transformers.</p>
-                <button type="button">Ver Ferramentas</button>
+                <button type="button" id="botao_ferramentas">Ver Ferramentas</button>
             </section>
             <section id="extra">
                 <p><b>Importante:</b> É altamente recomendado aprender a linguagem <b>Python</b> antes de começar a

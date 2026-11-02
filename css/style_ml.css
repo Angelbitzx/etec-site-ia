@@ -385,7 +385,13 @@ body {
 
 .robo {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
+.robo ul {
+    flex: 1 1 220px;
+    min-width: 0;
 }
 
 .robo img {
@@ -750,10 +756,20 @@ a:hover {
         width: clamp(52px, 16vw, 76px);
     }
 
+    .tituloarea {
+        flex: 1 1 0;
+    }
+
     .caixa_lateral img,
     .separador img,
     .giflateral {
         max-width: 100%;
         height: auto;
+    }
+
+    .robo img {
+        height: auto;
+        max-width: calc(100% - 10px);
+        margin: 0 auto 10px;
     }
 }

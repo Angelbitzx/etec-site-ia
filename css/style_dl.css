@@ -8,6 +8,7 @@
     --texto-principal: #333333;
     --texto-segundario: #666666;
     --borda: #c0deed;
+    --margem-lateral: clamp(16px, 11vw, 150px);
 }
 
 /* Reset básico para evitar rolagens indesejadas */
@@ -23,8 +24,7 @@ body {
 
 .layout {
     display: flex;
-    flex-wrap: wrap;
-    /* Permite que os itens descam em telas menores */
+    flex-wrap: nowrap;
     align-items: flex-start;
     gap: 20px;
     padding: 20px;
@@ -32,7 +32,7 @@ body {
 
 .cabecalho {
     background: #59b url("https://web.archive.org/web/20100722014630im_/http://s.twimg.com/a/1279750718/images/fronts/twitter-sun.gif") no-repeat 50% 0;
-    padding: 30px 150px 5px 150px;
+    padding: 30px var(--margem-lateral) 5px;
     color: #ffffff;
 }
 
@@ -44,7 +44,14 @@ body {
 }
 
 #logo {
+    display: block;
     width: 330px;
+    max-width: 100%;
+    height: auto;
+}
+
+.topo>a {
+    max-width: 100%;
 }
 
 .menu {
@@ -53,8 +60,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
     min-height: 40px;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: var(--margem-lateral);
+    padding-right: var(--margem-lateral);
 }
 
 .menu a {
@@ -70,20 +77,32 @@ body {
     border-radius: 4px;
     color: #def;
 }
-
 .flutuante {
-    position: absolute;
-    top: 50px;
-    right: 150px;
+    position: relative;
+    top: -170px;
+    right: auto;
+    width: 100%;
     max-width: 260px;
+    margin-bottom: 0;
     padding: 12px;
     border-radius: 15px;
     background-color: var(--fundo);
-    color: #456;
+    z-index: 2;
+}
+
+.flutuante h2,
+.flutuante p {
+    margin: 8px;
 }
 
 .flutuante h2 {
     font-size: 20px;
+    color: #333;
+}
+
+.flutuante p {
+    line-height: 20px;
+    color: #456;
 }
 
 .flutuante section {
@@ -100,6 +119,41 @@ body {
     background-color: #eee;
 }
 
+.flutuante button {
+    position: relative;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    border: 1px solid #fa2;
+    border-radius: 5px;
+    background: #fa2 url(https://web.archive.org/web/20100722014630im_/http://s.twimg.com/a/1279750718/images/fronts/bg-btn-signup.png) repeat-x 0 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.flutuante button:hover {
+    background-position: 0 -5px;
+    color: #111;
+}
+
+.flutuante button:active {
+    background-image: none;
+}
+.flutuante #principal {
+    background-color: #ddeef6;
+}
+
+.flutuante #extra {
+    margin-top: 12px;
+    background-color: #eee;
+}
+
+
 .caixa {
     background-color: var(--fundo-caixas);
     border-radius: 8px;
@@ -108,8 +162,7 @@ body {
     width: 100%;
     max-width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 250px;
-    /* Adapta ao espaço disponível */
+    flex: 0 0 250px;
 }
 
 .conteudo {
@@ -119,10 +172,60 @@ body {
     font-weight: normal;
     text-align: justify;
     width: 100%;
-    flex: 2 1 300px;
-    /* Expande para ocupar o espaço principal */
+    flex: 1 1 300px;
+    min-width: 0;
+    overflow-wrap: break-word;
+    /* Permite @container nos tópicos (texto + imagem) */
+    container-type: inline-size;
     margin: 0;
     min-height: auto;
+}
+
+/* Tópicos: texto e imagem lado a lado, alternando o lado da imagem */
+figure{
+    margin: 0;
+    padding: 0;
+}
+.topico {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0px 0;
+}
+
+.topico--inverso {
+    flex-direction: row-reverse;
+}
+
+.topico>p,
+.topico>ul {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+}
+
+.topico>img {
+    margin: 0;
+    padding: 0;
+    flex: 0 0 auto;
+    max-width: 42%;
+    height: auto;
+}
+
+/* Quando o conteúdo fica estreito, o texto vem primeiro e a imagem logo abaixo */
+@container (max-width: 560px) {
+
+    .topico,
+    .topico--inverso {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .topico>img {
+        align-self: center;
+        max-width: 100%;
+    }
 }
 
 .imagem {
@@ -186,7 +289,7 @@ body {
     width: 100%;
     background: #fff;
     color: var(--texto-segundario);
-    box-sizing: border-border-box;
+    box-sizing: border-box;
 }
 
 .botao-pesquisa {
@@ -202,6 +305,18 @@ body {
     font-size: 14px;
     cursor: pointer;
     border: none;
+}
+
+@media (max-width: 1099px) {
+    .layout {
+        flex-wrap: wrap;
+    }
+
+    .flutuante {
+        position: static;
+        flex: 1 1 100%;
+        max-width: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -226,9 +341,28 @@ body {
 
     .layout {
         flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        padding: 16px;
+    }
+
+    .caixa,
+    .conteudo,
+    .flutuante {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
     }
 
     .caixa {
-        max-width: 100%;
+        min-height: 0;
+    }
+
+    .conteudo {
+        text-align: left;
+    }
+
+    .frase-banner {
+        font-size: 17px;
     }
 }

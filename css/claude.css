@@ -239,6 +239,13 @@ h1 span {
     animation: digita 15s steps(var(--n)) calc(var(--i) * 5s) infinite, pisca .8s steps(1) infinite;
 }
 
+/* telas muito estreitas: a primeira linha (27 caracteres) era cortada */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 0.95rem;
+    }
+}
+
 @keyframes digita {
     0% {
         width: 0;

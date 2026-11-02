@@ -59,7 +59,7 @@ cite {
     text-align: center;
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 900;
-    font-size: clamp(2.4rem, 10cqw, 9rem);
+    font-size: clamp(1.8rem, max(10cqw, min(2.4rem, 11cqw)), 9rem);
     margin: 7px 0 -20px;
     line-height: 1;
     padding: 12px 0 0;
@@ -412,7 +412,7 @@ summary::-webkit-details-marker {
 }
 
 .quarto-paragrafo-p {
-    line-height: 20em;
+    line-height: 1.55;
 }
 
 /* Barra lateral */
@@ -554,9 +554,7 @@ summary::-webkit-details-marker {
     font-size: 0.9rem;
     padding: 6px 14px;
     border-radius: 20px;
-    transition: background 0.25s ease, color 0.2s ease;
-    transition: scale 0.25s ease, color 0.2s ease;
-    transition: box-shadow 0.25s ease, color 0.2s ease;
+    transition: background 0.25s ease, color 0.2s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .rodape__contato:hover {
