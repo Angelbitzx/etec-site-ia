@@ -226,6 +226,37 @@ body {
     color: #003a66;
 }
 
+.navegacao__link--proxima {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    border-color: #f1c77e;
+    background: linear-gradient(145deg, #fff5df, #f1d49e);
+    box-shadow: 0 5px 13px #001e376b, inset 0 1px 0 #fff;
+}
+
+.navegacao__proxima-legenda {
+    color: #76521e;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.navegacao__proxima-titulo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: #153e5c;
+    font-size: 0.9rem;
+}
+
+.navegacao__link--proxima:hover {
+    background: linear-gradient(145deg, #fffaf0, #f8e2b6);
+}
+
 @supports selector(details::details-content) {
     .navegacao__disclosure::details-content {
         content-visibility: hidden;

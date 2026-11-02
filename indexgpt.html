@@ -1,101 +1,341 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ChatGPT: o assistente conversacional da OpenAI</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/stylegpt.css">
-</head>
-<body>
-<input type="checkbox" id="tema" class="sr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatGPT: o assistente conversacional da OpenAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylegpt.css">
+  </head>
 
-<header><div class="wrap bar">
-<a class="brand" href="#topo"><img src="Img/agentes-ia/gptlogo.webp" alt="Logo do ChatGPT">ChatGPT</a>
-<div class="right"><a href="#funciona">Como funciona</a><a href="#usos">Usos</a><a href="#duvidas">Dúvidas</a><label class="sw" for="tema" role="button" tabindex="0" aria-label="Alternar tema claro e escuro"></label></div>
-</div></header>
+  <body>
+    <input type="checkbox" id="tema" class="sr">
 
-<main id="topo">
-<div class="hero"><div class="wrap">
-<h1>Converse com a IA que escreve, explica e resolve.</h1>
-<p>O ChatGPT, da OpenAI, entende o que você pede em linguagem natural e responde em segundos.</p>
-<a class="btn" href="#funciona">Ver como funciona</a><a class="btn alt" href="#usos">Explorar usos</a>
-<div class="demo">
-<input type="radio" name="c" id="c1" class="sr" checked>
-<input type="radio" name="c" id="c2" class="sr">
-<input type="radio" name="c" id="c3" class="sr">
-<div class="convo">
-<div class="set s1"><div class="row"><span class="av">Você</span><p>Explique o que é inflação em uma frase.</p></div><div class="row bot"><span class="av"><img src="Img/agentes-ia/gptlogo.webp" alt=""></span><p>Inflação é a alta geral e contínua dos preços, que faz o mesmo dinheiro comprar menos com o tempo.</p></div></div>
-<div class="set s2"><div class="row"><span class="av">Você</span><p>Dê uma dica para estudar melhor.</p></div><div class="row bot"><span class="av"><img src="Img/agentes-ia/gptlogo.webp" alt=""></span><p>Estude em blocos de 25 minutos com pausas curtas e teste a si mesmo em vez de só reler.</p></div></div>
-<div class="set s3"><div class="row"><span class="av">Você</span><p>Sugira um título para meu blog de viagens.</p></div><div class="row bot"><span class="av"><img src="Img/agentes-ia/gptlogo.webp" alt=""></span><p>Mochila Leve, Mundo Grande: histórias e roteiros para quem viaja sem pressa.</p></div></div>
-</div>
-<div class="chips"><label for="c1">Economia</label><label for="c2">Estudos</label><label for="c3">Criatividade</label></div>
-</div>
-</div></div>
+    <header>
+      <div class="wrap bar">
+        <a class="brand" href="#topo">
+          <img src="Img/agentes-ia/gptlogo.webp" alt="Logo do ChatGPT">
+          ChatGPT
+        </a>
+        <div class="right" role="group" aria-label="Navegação">
+          <a href="#funciona">Como funciona</a>
+          <a href="#usos">Usos</a>
+          <a href="#duvidas">Dúvidas</a>
+          <details class="site-menu">
+            <summary class="site-menu-trigger">Páginas <span aria-hidden="true">⌄</span></summary>
+            <div class="site-menu-panel">
+              <p class="site-menu-heading">Todas as páginas</p>
+              <a class="site-menu-home" href="index.html">← Voltar ao começo <span aria-hidden="true">↗</span></a>
+              <div class="site-menu-links">
+                <a href="ML.HTML">Machine Learning</a>
+                <a href="DL.html">Deep Learning</a>
+                <a href="PrincipaisIAs.html">Principais IAs</a>
+                <a href="construção.html">Construção das IAs</a>
+                <a href="ia_bd.html">Dados e IA</a>
+                <a href="chat.html">Chatbots</a>
+                <a href="agentes.html">Agentes de IA</a>
+                <a href="indexgemini.html">Gemini</a>
+                <a href="indexgpt.html" aria-current="page">ChatGPT</a>
+              </div>
+            </div>
+          </details>
+          <label class="sw" for="tema" role="button" tabindex="0" aria-label="Alternar tema claro e escuro"></label>
+        </div>
+      </div>
+    </header>
 
-<section id="funciona"><div class="wrap split">
-<div>
-<h2>Como ele age</h2>
-<p class="lead">Do seu pedido à resposta, em quatro etapas.</p>
-<div class="timeline">
-<div class="t"><h3>Você escreve o pedido</h3><p>Em português simples, sem comandos especiais.</p></div>
-<div class="t"><h3>O modelo analisa o contexto</h3><p>Ele considera toda a conversa para entender sua intenção.</p></div>
-<div class="t"><h3>A resposta é gerada</h3><p>Palavra por palavra, com base em padrões aprendidos no treinamento.</p></div>
-<div class="t"><h3>Você refina</h3><p>Peça ajustes, exemplos ou outro tom até ficar ideal.</p></div>
-</div>
-</div>
-<div>
-<h2>Por que importa</h2>
-<p class="lead">Um novo jeito de acessar conhecimento e produzir.</p>
-<div class="impact">
-<div class="imp"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Produtividade</h3><p>Tarefas de minutos viram segundos.</p></div></div>
-<div class="imp"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h6a3 3 0 013 3v12a2 2 0 00-2-2H4zM20 5h-6a3 3 0 00-3 3"/></svg></span><div><h3>Aprendizado</h3><p>Um tutor paciente, disponível a qualquer hora.</p></div></div>
-<div class="imp"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></svg></span><div><h3>Criatividade</h3><p>Ideias e rascunhos para destravar projetos.</p></div></div>
-<div class="imp"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><div><h3>Uso consciente</h3><p>Ele pode errar: sempre verifique o que for importante.</p></div></div>
-</div>
-</div>
-</div></section>
+    <main id="topo">
+      <div class="hero">
+        <div class="wrap">
+          <h1>Converse com a IA que escreve, explica e resolve.</h1>
+          <p>O ChatGPT, da OpenAI, entende o que você pede em linguagem natural e responde em segundos.</p>
+          <a class="btn" href="#funciona">Ver como funciona</a>
+          <a class="btn alt" href="#usos">Explorar usos</a>
 
-<section id="usos"><div class="wrap">
-<h2>O que você pode fazer</h2>
-<p class="lead">Escolha uma área e veja exemplos práticos.</p>
-<input type="radio" name="u" id="u1" class="sr" checked>
-<input type="radio" name="u" id="u2" class="sr">
-<input type="radio" name="u" id="u3" class="sr">
-<div class="tabs"><label for="u1">Trabalho</label><label for="u2">Estudo</label><label for="u3">Criação</label></div>
-<div class="panels">
-<div class="panel" id="p1">
-<div class="tile"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 8l9 6 9-6"/></svg></span><h3>E-mails</h3><p>Redija e ajuste o tom de mensagens.</p></div>
-<div class="tile"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM9 9h6M9 13h6"/></svg></span><h3>Resumos</h3><p>Transforme relatórios longos em tópicos.</p></div>
-<div class="tile"><span class="ic"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span><h3>Código</h3><p>Escreva, explique e depure programas.</p></div>
-</div>
-<div class="panel" id="p2">
-<div class="tile"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 115 0c0 2-2.5 2-2.5 4M12 17h.01"/></svg></span><h3>Tirar dúvidas</h3><p>Explicações passo a passo e com exemplos.</p></div>
-<div class="tile"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><h3>Simulados</h3><p>Crie perguntas para testar o que aprendeu.</p></div>
-<div class="tile"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 5h8v14H3zM13 5h8v14h-8z"/></svg></span><h3>Idiomas</h3><p>Pratique conversação e tradução.</p></div>
-</div>
-<div class="panel" id="p3">
-<div class="tile"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20l4-1L19 8l-3-3L5 16z"/></svg></span><h3>Textos</h3><p>Histórias, posts e roteiros originais.</p></div>
-<div class="tile"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-6-6-8 9"/></svg></span><h3>Imagens</h3><p>Gere ilustrações a partir de uma descrição.</p></div>
-<div class="tile"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 00-3 3v6a3 3 0 006 0V6a3 3 0 00-3-3zM5 11a7 7 0 0014 0M12 18v3"/></svg></span><h3>Voz</h3><p>Converse falando, como numa ligação.</p></div>
-</div>
-</div>
-</div></section>
+          <div class="demo">
+            <input type="radio" name="c" id="c1" class="sr" checked>
+            <input type="radio" name="c" id="c2" class="sr">
+            <input type="radio" name="c" id="c3" class="sr">
 
-<section id="duvidas"><div class="wrap">
-<h2>Dúvidas frequentes</h2>
-<p class="lead">Respostas diretas.</p>
-<div class="faq">
-<details><summary>Quem criou o ChatGPT?</summary><p>A OpenAI, que o lançou ao público em novembro de 2022.</p></details>
-<details><summary>Ele entende português?</summary><p>Sim. Ele funciona em dezenas de idiomas, incluindo o português do Brasil.</p></details>
-<details><summary>As respostas são sempre corretas?</summary><p>Não. Ele pode errar ou inventar informações. Confirme dados sensíveis em fontes confiáveis.</p></details>
-<details><summary>Devo compartilhar dados pessoais?</summary><p>Evite enviar senhas, documentos e informações privadas.</p></details>
-</div>
-</div></section>
-</main>
+            <div class="convo">
+              <div class="set s1">
+                <div class="row">
+                  <span class="av">Você</span>
+                  <p>Explique o que é inflação em uma frase.</p>
+                </div>
+                <div class="row bot">
+                  <span class="av"><img src="Img/agentes-ia/gptlogo.webp" alt=""></span>
+                  <p>Inflação é a alta geral e contínua dos preços, que faz o mesmo dinheiro comprar menos com o tempo.</p>
+                </div>
+              </div>
 
-<footer><div class="wrap foot"><span>Página educativa sobre o ChatGPT.</span><span>ChatGPT é marca da OpenAI. Este site não tem vínculo oficial.</span></div></footer>
-</body>
+              <div class="set s2">
+                <div class="row">
+                  <span class="av">Você</span>
+                  <p>Dê uma dica para estudar melhor.</p>
+                </div>
+                <div class="row bot">
+                  <span class="av"><img src="Img/agentes-ia/gptlogo.webp" alt=""></span>
+                  <p>Estude em blocos de 25 minutos com pausas curtas e teste a si mesmo em vez de só reler.</p>
+                </div>
+              </div>
+
+              <div class="set s3">
+                <div class="row">
+                  <span class="av">Você</span>
+                  <p>Sugira um título para meu blog de viagens.</p>
+                </div>
+                <div class="row bot">
+                  <span class="av"><img src="Img/agentes-ia/gptlogo.webp" alt=""></span>
+                  <p>Mochila Leve, Mundo Grande: histórias e roteiros para quem viaja sem pressa.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="chips">
+              <label for="c1">Economia</label>
+              <label for="c2">Estudos</label>
+              <label for="c3">Criatividade</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="funciona">
+        <div class="wrap split">
+          <div>
+            <h2>Como ele age</h2>
+            <p class="lead">Do seu pedido à resposta, em quatro etapas.</p>
+            <div class="timeline">
+              <div class="t">
+                <h3>Você escreve o pedido</h3>
+                <p>Em português simples, sem comandos especiais.</p>
+              </div>
+              <div class="t">
+                <h3>O modelo analisa o contexto</h3>
+                <p>Ele considera toda a conversa para entender sua intenção.</p>
+              </div>
+              <div class="t">
+                <h3>A resposta é gerada</h3>
+                <p>Palavra por palavra, com base em padrões aprendidos no treinamento.</p>
+              </div>
+              <div class="t">
+                <h3>Você refina</h3>
+                <p>Peça ajustes, exemplos ou outro tom até ficar ideal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2>Por que importa</h2>
+            <p class="lead">Um novo jeito de acessar conhecimento e produzir.</p>
+            <div class="impact">
+              <div class="imp">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 7v5l3 2"></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3>Produtividade</h3>
+                  <p>Tarefas de minutos viram segundos.</p>
+                </div>
+              </div>
+
+              <div class="imp">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 5h6a3 3 0 013 3v12a2 2 0 00-2-2H4zM20 5h-6a3 3 0 00-3 3"></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3>Aprendizado</h3>
+                  <p>Um tutor paciente, disponível a qualquer hora.</p>
+                </div>
+              </div>
+
+              <div class="imp">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3>Criatividade</h3>
+                  <p>Ideias e rascunhos para destravar projetos.</p>
+                </div>
+              </div>
+
+              <div class="imp">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
+                  </svg>
+                </span>
+                <div>
+                  <h3>Uso consciente</h3>
+                  <p>Ele pode errar: sempre verifique o que for importante.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="usos">
+        <div class="wrap">
+          <h2>O que você pode fazer</h2>
+          <p class="lead">Escolha uma área e veja exemplos práticos.</p>
+
+          <input type="radio" name="u" id="u1" class="sr" checked>
+          <input type="radio" name="u" id="u2" class="sr">
+          <input type="radio" name="u" id="u3" class="sr">
+
+          <div class="tabs">
+            <label for="u1">Trabalho</label>
+            <label for="u2">Estudo</label>
+            <label for="u3">Criação</label>
+          </div>
+
+          <div class="panels">
+            <div class="panel" id="p1">
+              <div class="tile">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="M3 8l9 6 9-6"></path>
+                  </svg>
+                </span>
+                <h3>E-mails</h3>
+                <p>Redija e ajuste o tom de mensagens.</p>
+              </div>
+
+              <div class="tile">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 4h14v16H5zM9 9h6M9 13h6"></path>
+                  </svg>
+                </span>
+                <h3>Resumos</h3>
+                <p>Transforme relatórios longos em tópicos.</p>
+              </div>
+
+              <div class="tile">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M8 7l-5 5 5 5M16 7l5 5-5 5"></path>
+                  </svg>
+                </span>
+                <h3>Código</h3>
+                <p>Escreva, explique e depure programas.</p>
+              </div>
+            </div>
+
+            <div class="panel" id="p2">
+              <div class="tile">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M9.5 9a2.5 2.5 0 115 0c0 2-2.5 2-2.5 4M12 17h.01"></path>
+                  </svg>
+                </span>
+                <h3>Tirar dúvidas</h3>
+                <p>Explicações passo a passo e com exemplos.</p>
+              </div>
+
+              <div class="tile">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12l5 5 9-10"></path>
+                  </svg>
+                </span>
+                <h3>Simulados</h3>
+                <p>Crie perguntas para testar o que aprendeu.</p>
+              </div>
+
+              <div class="tile">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M3 5h8v14H3zM13 5h8v14h-8z"></path>
+                  </svg>
+                </span>
+                <h3>Idiomas</h3>
+                <p>Pratique conversação e tradução.</p>
+              </div>
+            </div>
+
+            <div class="panel" id="p3">
+              <div class="tile">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 20l4-1L19 8l-3-3L5 16z"></path>
+                  </svg>
+                </span>
+                <h3>Textos</h3>
+                <p>Histórias, posts e roteiros originais.</p>
+              </div>
+
+              <div class="tile">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="16" rx="3"></rect>
+                    <circle cx="9" cy="10" r="2"></circle>
+                    <path d="M21 17l-6-6-8 9"></path>
+                  </svg>
+                </span>
+                <h3>Imagens</h3>
+                <p>Gere ilustrações a partir de uma descrição.</p>
+              </div>
+
+              <div class="tile">
+                <span class="ic">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3a3 3 0 00-3 3v6a3 3 0 006 0V6a3 3 0 00-3-3zM5 11a7 7 0 0014 0M12 18v3"></path>
+                  </svg>
+                </span>
+                <h3>Voz</h3>
+                <p>Converse falando, como numa ligação.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="duvidas">
+        <div class="wrap">
+          <h2>Dúvidas frequentes</h2>
+          <p class="lead">Respostas diretas.</p>
+
+          <div class="faq">
+            <details>
+              <summary>Quem criou o ChatGPT?</summary>
+              <p>A OpenAI, que o lançou ao público em novembro de 2022.</p>
+            </details>
+            <details>
+              <summary>Ele entende português?</summary>
+              <p>Sim. Ele funciona em dezenas de idiomas, incluindo o português do Brasil.</p>
+            </details>
+            <details>
+              <summary>As respostas são sempre corretas?</summary>
+              <p>Não. Ele pode errar ou inventar informações. Confirme dados sensíveis em fontes confiáveis.</p>
+            </details>
+            <details>
+              <summary>Devo compartilhar dados pessoais?</summary>
+              <p>Evite enviar senhas, documentos e informações privadas.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot">
+        <span>Página educativa sobre o ChatGPT.</span>
+        <span>ChatGPT é marca da OpenAI. Este site não tem vínculo oficial.</span>
+      </div>
+    </footer>
+  </body>
 </html>
