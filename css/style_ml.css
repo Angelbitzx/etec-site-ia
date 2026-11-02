@@ -124,12 +124,13 @@ body {
    MENU
    ========================= */
 
-#menu {
+.menu-pagina {
+    position: relative;
+    z-index: 5;
     width: 95%;
-    height: 60px;
     margin: 0 auto;
+    padding: 8px 14px;
     border: 2px outset #B3E5FC;
-    overflow: hidden;
     color: #0A0A0A;
     background: linear-gradient(180deg,
             #848788 0%,
@@ -138,44 +139,74 @@ body {
             #95cae7 70%,
             #818e94 100%);
     display: flex;
+    justify-content: flex-end;
 }
 
+.menu__disclosure {
+    position: relative;
+    border: 0;
+    padding: 0;
+}
 
-/* =========================
-   BOTÃO DO MENU
-   ========================= */
-.botaomenu {
-    height: 100%;
-    margin-left: 10px;
-    display: flex;
+.menu__trigger {
+    display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 10px;
-}
-
-.botaomenu p {
-    margin: 0;
-    font-size: 14px;
-    font-weight: bold;
+    padding: 7px 12px;
+    border: 1px solid #0b2942;
+    background: #e1f5fe;
     color: #0b2942;
-    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 180ms ease, color 180ms ease;
 }
 
-
-/* =========================
-   BOTÃO VOLTAR
-   ========================= */
-
-.voltar {
-    width: auto;
-    height: 30px;
-    display: block;
+.menu__trigger::-webkit-details-marker {
+    display: none;
 }
 
-.avancar {
-    width: auto;
-    height: 30px;
+.menu__trigger svg {
+    width: 20px;
+    height: 20px;
+}
+
+.menu__trigger:hover,
+.menu__disclosure[open] .menu__trigger {
+    background: #1a3a5c;
+    color: #fff;
+}
+
+.menu__painel {
+    position: absolute;
+    top: calc(100% + 9px);
+    right: 0;
+    display: grid;
+    gap: 7px;
+    width: min(360px, calc(100vw - 40px));
+    max-height: min(70vh, 500px);
+    padding: 12px;
+    overflow-y: auto;
+    border: 1px solid #31536a;
+    background: #e1f5fe;
+    box-shadow: 4px 4px 0 #172b3a66;
+}
+
+.menu__link {
     display: block;
+    padding: 9px 11px;
+    border: 1px solid #31536a;
+    background: #f4fbfe;
+    color: #0b2942;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.menu__link:hover,
+.menu__link:focus-visible {
+    background: #1a3a5c;
+    color: #fff;
 }
 
 /* =========================
@@ -716,19 +747,9 @@ a:hover {
         height: auto;
     }
 
-    #menu {
-        height: auto;
-        min-height: 60px;
-        overflow: visible;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 6px;
-    }
-
-    .botaomenu {
-        min-height: 44px;
-        height: auto;
-        margin: 0 4px;
+    .menu-pagina {
+        width: 95%;
+        padding: 6px 10px;
     }
 
     .secao {

@@ -29,25 +29,26 @@
         </header>
 
 
-        <nav id="menu" aria-label="Navegação principal">
-
-            <div class="botaomenu">
-                <a href="index.html">
-                    <img src="gifs/back.gif" alt="Voltar" class="voltar">
-                    <p>1950</p>
-                </a>
-            </div>
-
-            <div class="botaomenu">
-                <a href="DL.html">
-                    <img src="gifs/next.gif" alt="Avançar" class="voltar">
-                    <p>2010</p>
-                </a>
-            </div>
-            <div class="botaomenu">
-                <a href="pesquisas/Pesquisas.zip" download>Baixar pesquisa completa </a>
-            </div>
-
+        <nav class="menu-pagina" aria-label="Navegação principal">
+            <details class="menu__disclosure">
+                <summary class="menu__trigger">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" />
+                    </svg>
+                    Menu
+                </summary>
+                <div class="menu__painel">
+                    <a href="index.html" class="menu__link">História da inteligência artificial</a>
+                    <a href="DL.html" class="menu__link">Aprendizado profundo</a>
+                    <a href="PrincipaisIAs.html" class="menu__link">Principais inteligências artificiais</a>
+                    <a href="construção.html" class="menu__link">Como as inteligências artificiais são criadas</a>
+                    <a href="ia_bd.html" class="menu__link">Dados e inteligência artificial</a>
+                    <a href="chat.html" class="menu__link">Assistentes de conversa</a>
+                    <a href="agentes.html" class="menu__link">Agentes de inteligência artificial</a>
+                    <a href="pesquisas/Pesquisas.zip" download class="menu__link">Baixar pesquisas do projeto</a>
+                </div>
+            </details>
         </nav>
 
 
